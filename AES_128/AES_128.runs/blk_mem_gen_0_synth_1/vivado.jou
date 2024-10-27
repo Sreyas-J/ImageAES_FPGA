@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Oct 27 14:25:12 2024
+# Process ID: 385593
+# Current directory: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_128/AES_128.runs/blk_mem_gen_0_synth_1
+# Command line: vivado -log blk_mem_gen_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_0.tcl
+# Log file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_128/AES_128.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.vds
+# Journal file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_128/AES_128.runs/blk_mem_gen_0_synth_1/vivado.jou
+# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 3510.239 MHz, CPU Physical cores: 12, Host memory: 7635 MB
+#-----------------------------------------------------------
+source blk_mem_gen_0.tcl -notrace
