@@ -35,7 +35,7 @@
     <Object name="reset_1" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <ObjectList object_type="hw_vio" gui_info="">
-    <Object name="hw_vio_1" gui_info="dashboard_1/hw_vio_1/TablePreference=5	356	Name	0	2147483647	15	84	84	Value	1	2147483647	15	75	75	Activity	2	2147483647	15	57	57	Direction	3	2147483647	15	70	70	VIO	4	2147483647	15	70	70			1	6	1	Name	Value	Activity	Direction	VIO"/>
+    <Object name="hw_vio_1" gui_info="dashboard_1/hw_vio_1/TablePreference=5	356	Name	0	2147483647	15	84	84	Value	1	2147483647	15	75	75	Activity	2	2147483647	15	57	57	Direction	3	2147483647	15	70	70	VIO	4	2147483647	15	70	70			1	6	1	Name	Value	Activity	Direction	VIO,hw_vios/hw_vio_1/TablePreference=5	356	Name	0	2147483647	15	84	84	Value	1	2147483647	15	75	75	Activity	2	2147483647	15	57	57	Direction	3	2147483647	15	70	70	VIO	4	2147483647	15	70	70			1	6	1	Name	Value	Activity	Direction	VIO"/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

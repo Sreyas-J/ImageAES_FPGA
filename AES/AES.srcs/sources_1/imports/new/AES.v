@@ -14,8 +14,6 @@ initial begin
  end
 wire[127:0] encrypted128;
 
-// The plain text used as input
-//wire[127:0] in = 128'h00112233445566778899aabbccddeeff;
 blk_mem_gen_1 BRAM (
   .clka(clk),    // input wire clka
   .ena(ena),      // input wire ena
@@ -34,12 +32,10 @@ ila_0 ila0 (
 	.probe3(reset)
 );
 
-// The different keys used for testing (one of each type)
 wire[127:0] key128 = 128'h000102030405060708090a0b0c0d0e0f;
 
-// The result of the encryption module for every type
-
 AES_Encrypt a(clk,in,key128,encrypted128);
+
 vio_0 vio0 (
   .clk(clk),                // input wire clk
   .probe_out0(reset)  // output wire [0 : 0] probe_out0
