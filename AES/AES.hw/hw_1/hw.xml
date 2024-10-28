@@ -248,7 +248,7 @@
         <net name="addra[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
@@ -258,7 +258,65 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe0[8:0]"/>
+        <Option Id="MAP" value="probe2[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="addra[0][8]"/>
+        <net name="addra[0][7]"/>
+        <net name="addra[0][6]"/>
+        <net name="addra[0][5]"/>
+        <net name="addra[0][4]"/>
+        <net name="addra[0][3]"/>
+        <net name="addra[0][2]"/>
+        <net name="addra[0][1]"/>
+        <net name="addra[0][0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="addra[1][8]"/>
+        <net name="addra[1][7]"/>
+        <net name="addra[1][6]"/>
+        <net name="addra[1][5]"/>
+        <net name="addra[1][4]"/>
+        <net name="addra[1][3]"/>
+        <net name="addra[1][2]"/>
+        <net name="addra[1][1]"/>
+        <net name="addra[1][0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[8:0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
@@ -346,6 +404,154 @@
       </probeOptions>
       <nets>
         <net name="clk_out1_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[127:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="encrypted128[0][127]"/>
+        <net name="encrypted128[0][126]"/>
+        <net name="encrypted128[0][125]"/>
+        <net name="encrypted128[0][124]"/>
+        <net name="encrypted128[0][123]"/>
+        <net name="encrypted128[0][122]"/>
+        <net name="encrypted128[0][121]"/>
+        <net name="encrypted128[0][120]"/>
+        <net name="encrypted128[0][119]"/>
+        <net name="encrypted128[0][118]"/>
+        <net name="encrypted128[0][117]"/>
+        <net name="encrypted128[0][116]"/>
+        <net name="encrypted128[0][115]"/>
+        <net name="encrypted128[0][114]"/>
+        <net name="encrypted128[0][113]"/>
+        <net name="encrypted128[0][112]"/>
+        <net name="encrypted128[0][111]"/>
+        <net name="encrypted128[0][110]"/>
+        <net name="encrypted128[0][109]"/>
+        <net name="encrypted128[0][108]"/>
+        <net name="encrypted128[0][107]"/>
+        <net name="encrypted128[0][106]"/>
+        <net name="encrypted128[0][105]"/>
+        <net name="encrypted128[0][104]"/>
+        <net name="encrypted128[0][103]"/>
+        <net name="encrypted128[0][102]"/>
+        <net name="encrypted128[0][101]"/>
+        <net name="encrypted128[0][100]"/>
+        <net name="encrypted128[0][99]"/>
+        <net name="encrypted128[0][98]"/>
+        <net name="encrypted128[0][97]"/>
+        <net name="encrypted128[0][96]"/>
+        <net name="encrypted128[0][95]"/>
+        <net name="encrypted128[0][94]"/>
+        <net name="encrypted128[0][93]"/>
+        <net name="encrypted128[0][92]"/>
+        <net name="encrypted128[0][91]"/>
+        <net name="encrypted128[0][90]"/>
+        <net name="encrypted128[0][89]"/>
+        <net name="encrypted128[0][88]"/>
+        <net name="encrypted128[0][87]"/>
+        <net name="encrypted128[0][86]"/>
+        <net name="encrypted128[0][85]"/>
+        <net name="encrypted128[0][84]"/>
+        <net name="encrypted128[0][83]"/>
+        <net name="encrypted128[0][82]"/>
+        <net name="encrypted128[0][81]"/>
+        <net name="encrypted128[0][80]"/>
+        <net name="encrypted128[0][79]"/>
+        <net name="encrypted128[0][78]"/>
+        <net name="encrypted128[0][77]"/>
+        <net name="encrypted128[0][76]"/>
+        <net name="encrypted128[0][75]"/>
+        <net name="encrypted128[0][74]"/>
+        <net name="encrypted128[0][73]"/>
+        <net name="encrypted128[0][72]"/>
+        <net name="encrypted128[0][71]"/>
+        <net name="encrypted128[0][70]"/>
+        <net name="encrypted128[0][69]"/>
+        <net name="encrypted128[0][68]"/>
+        <net name="encrypted128[0][67]"/>
+        <net name="encrypted128[0][66]"/>
+        <net name="encrypted128[0][65]"/>
+        <net name="encrypted128[0][64]"/>
+        <net name="encrypted128[0][63]"/>
+        <net name="encrypted128[0][62]"/>
+        <net name="encrypted128[0][61]"/>
+        <net name="encrypted128[0][60]"/>
+        <net name="encrypted128[0][59]"/>
+        <net name="encrypted128[0][58]"/>
+        <net name="encrypted128[0][57]"/>
+        <net name="encrypted128[0][56]"/>
+        <net name="encrypted128[0][55]"/>
+        <net name="encrypted128[0][54]"/>
+        <net name="encrypted128[0][53]"/>
+        <net name="encrypted128[0][52]"/>
+        <net name="encrypted128[0][51]"/>
+        <net name="encrypted128[0][50]"/>
+        <net name="encrypted128[0][49]"/>
+        <net name="encrypted128[0][48]"/>
+        <net name="encrypted128[0][47]"/>
+        <net name="encrypted128[0][46]"/>
+        <net name="encrypted128[0][45]"/>
+        <net name="encrypted128[0][44]"/>
+        <net name="encrypted128[0][43]"/>
+        <net name="encrypted128[0][42]"/>
+        <net name="encrypted128[0][41]"/>
+        <net name="encrypted128[0][40]"/>
+        <net name="encrypted128[0][39]"/>
+        <net name="encrypted128[0][38]"/>
+        <net name="encrypted128[0][37]"/>
+        <net name="encrypted128[0][36]"/>
+        <net name="encrypted128[0][35]"/>
+        <net name="encrypted128[0][34]"/>
+        <net name="encrypted128[0][33]"/>
+        <net name="encrypted128[0][32]"/>
+        <net name="encrypted128[0][31]"/>
+        <net name="encrypted128[0][30]"/>
+        <net name="encrypted128[0][29]"/>
+        <net name="encrypted128[0][28]"/>
+        <net name="encrypted128[0][27]"/>
+        <net name="encrypted128[0][26]"/>
+        <net name="encrypted128[0][25]"/>
+        <net name="encrypted128[0][24]"/>
+        <net name="encrypted128[0][23]"/>
+        <net name="encrypted128[0][22]"/>
+        <net name="encrypted128[0][21]"/>
+        <net name="encrypted128[0][20]"/>
+        <net name="encrypted128[0][19]"/>
+        <net name="encrypted128[0][18]"/>
+        <net name="encrypted128[0][17]"/>
+        <net name="encrypted128[0][16]"/>
+        <net name="encrypted128[0][15]"/>
+        <net name="encrypted128[0][14]"/>
+        <net name="encrypted128[0][13]"/>
+        <net name="encrypted128[0][12]"/>
+        <net name="encrypted128[0][11]"/>
+        <net name="encrypted128[0][10]"/>
+        <net name="encrypted128[0][9]"/>
+        <net name="encrypted128[0][8]"/>
+        <net name="encrypted128[0][7]"/>
+        <net name="encrypted128[0][6]"/>
+        <net name="encrypted128[0][5]"/>
+        <net name="encrypted128[0][4]"/>
+        <net name="encrypted128[0][3]"/>
+        <net name="encrypted128[0][2]"/>
+        <net name="encrypted128[0][1]"/>
+        <net name="encrypted128[0][0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
@@ -494,6 +700,154 @@
         <net name="encrypted128[2]"/>
         <net name="encrypted128[1]"/>
         <net name="encrypted128[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[127:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="encrypted128[1][127]"/>
+        <net name="encrypted128[1][126]"/>
+        <net name="encrypted128[1][125]"/>
+        <net name="encrypted128[1][124]"/>
+        <net name="encrypted128[1][123]"/>
+        <net name="encrypted128[1][122]"/>
+        <net name="encrypted128[1][121]"/>
+        <net name="encrypted128[1][120]"/>
+        <net name="encrypted128[1][119]"/>
+        <net name="encrypted128[1][118]"/>
+        <net name="encrypted128[1][117]"/>
+        <net name="encrypted128[1][116]"/>
+        <net name="encrypted128[1][115]"/>
+        <net name="encrypted128[1][114]"/>
+        <net name="encrypted128[1][113]"/>
+        <net name="encrypted128[1][112]"/>
+        <net name="encrypted128[1][111]"/>
+        <net name="encrypted128[1][110]"/>
+        <net name="encrypted128[1][109]"/>
+        <net name="encrypted128[1][108]"/>
+        <net name="encrypted128[1][107]"/>
+        <net name="encrypted128[1][106]"/>
+        <net name="encrypted128[1][105]"/>
+        <net name="encrypted128[1][104]"/>
+        <net name="encrypted128[1][103]"/>
+        <net name="encrypted128[1][102]"/>
+        <net name="encrypted128[1][101]"/>
+        <net name="encrypted128[1][100]"/>
+        <net name="encrypted128[1][99]"/>
+        <net name="encrypted128[1][98]"/>
+        <net name="encrypted128[1][97]"/>
+        <net name="encrypted128[1][96]"/>
+        <net name="encrypted128[1][95]"/>
+        <net name="encrypted128[1][94]"/>
+        <net name="encrypted128[1][93]"/>
+        <net name="encrypted128[1][92]"/>
+        <net name="encrypted128[1][91]"/>
+        <net name="encrypted128[1][90]"/>
+        <net name="encrypted128[1][89]"/>
+        <net name="encrypted128[1][88]"/>
+        <net name="encrypted128[1][87]"/>
+        <net name="encrypted128[1][86]"/>
+        <net name="encrypted128[1][85]"/>
+        <net name="encrypted128[1][84]"/>
+        <net name="encrypted128[1][83]"/>
+        <net name="encrypted128[1][82]"/>
+        <net name="encrypted128[1][81]"/>
+        <net name="encrypted128[1][80]"/>
+        <net name="encrypted128[1][79]"/>
+        <net name="encrypted128[1][78]"/>
+        <net name="encrypted128[1][77]"/>
+        <net name="encrypted128[1][76]"/>
+        <net name="encrypted128[1][75]"/>
+        <net name="encrypted128[1][74]"/>
+        <net name="encrypted128[1][73]"/>
+        <net name="encrypted128[1][72]"/>
+        <net name="encrypted128[1][71]"/>
+        <net name="encrypted128[1][70]"/>
+        <net name="encrypted128[1][69]"/>
+        <net name="encrypted128[1][68]"/>
+        <net name="encrypted128[1][67]"/>
+        <net name="encrypted128[1][66]"/>
+        <net name="encrypted128[1][65]"/>
+        <net name="encrypted128[1][64]"/>
+        <net name="encrypted128[1][63]"/>
+        <net name="encrypted128[1][62]"/>
+        <net name="encrypted128[1][61]"/>
+        <net name="encrypted128[1][60]"/>
+        <net name="encrypted128[1][59]"/>
+        <net name="encrypted128[1][58]"/>
+        <net name="encrypted128[1][57]"/>
+        <net name="encrypted128[1][56]"/>
+        <net name="encrypted128[1][55]"/>
+        <net name="encrypted128[1][54]"/>
+        <net name="encrypted128[1][53]"/>
+        <net name="encrypted128[1][52]"/>
+        <net name="encrypted128[1][51]"/>
+        <net name="encrypted128[1][50]"/>
+        <net name="encrypted128[1][49]"/>
+        <net name="encrypted128[1][48]"/>
+        <net name="encrypted128[1][47]"/>
+        <net name="encrypted128[1][46]"/>
+        <net name="encrypted128[1][45]"/>
+        <net name="encrypted128[1][44]"/>
+        <net name="encrypted128[1][43]"/>
+        <net name="encrypted128[1][42]"/>
+        <net name="encrypted128[1][41]"/>
+        <net name="encrypted128[1][40]"/>
+        <net name="encrypted128[1][39]"/>
+        <net name="encrypted128[1][38]"/>
+        <net name="encrypted128[1][37]"/>
+        <net name="encrypted128[1][36]"/>
+        <net name="encrypted128[1][35]"/>
+        <net name="encrypted128[1][34]"/>
+        <net name="encrypted128[1][33]"/>
+        <net name="encrypted128[1][32]"/>
+        <net name="encrypted128[1][31]"/>
+        <net name="encrypted128[1][30]"/>
+        <net name="encrypted128[1][29]"/>
+        <net name="encrypted128[1][28]"/>
+        <net name="encrypted128[1][27]"/>
+        <net name="encrypted128[1][26]"/>
+        <net name="encrypted128[1][25]"/>
+        <net name="encrypted128[1][24]"/>
+        <net name="encrypted128[1][23]"/>
+        <net name="encrypted128[1][22]"/>
+        <net name="encrypted128[1][21]"/>
+        <net name="encrypted128[1][20]"/>
+        <net name="encrypted128[1][19]"/>
+        <net name="encrypted128[1][18]"/>
+        <net name="encrypted128[1][17]"/>
+        <net name="encrypted128[1][16]"/>
+        <net name="encrypted128[1][15]"/>
+        <net name="encrypted128[1][14]"/>
+        <net name="encrypted128[1][13]"/>
+        <net name="encrypted128[1][12]"/>
+        <net name="encrypted128[1][11]"/>
+        <net name="encrypted128[1][10]"/>
+        <net name="encrypted128[1][9]"/>
+        <net name="encrypted128[1][8]"/>
+        <net name="encrypted128[1][7]"/>
+        <net name="encrypted128[1][6]"/>
+        <net name="encrypted128[1][5]"/>
+        <net name="encrypted128[1][4]"/>
+        <net name="encrypted128[1][3]"/>
+        <net name="encrypted128[1][2]"/>
+        <net name="encrypted128[1][1]"/>
+        <net name="encrypted128[1][0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -662,6 +1016,154 @@
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
+        <net name="in[0][127]"/>
+        <net name="in[0][126]"/>
+        <net name="in[0][125]"/>
+        <net name="in[0][124]"/>
+        <net name="in[0][123]"/>
+        <net name="in[0][122]"/>
+        <net name="in[0][121]"/>
+        <net name="in[0][120]"/>
+        <net name="in[0][119]"/>
+        <net name="in[0][118]"/>
+        <net name="in[0][117]"/>
+        <net name="in[0][116]"/>
+        <net name="in[0][115]"/>
+        <net name="in[0][114]"/>
+        <net name="in[0][113]"/>
+        <net name="in[0][112]"/>
+        <net name="in[0][111]"/>
+        <net name="in[0][110]"/>
+        <net name="in[0][109]"/>
+        <net name="in[0][108]"/>
+        <net name="in[0][107]"/>
+        <net name="in[0][106]"/>
+        <net name="in[0][105]"/>
+        <net name="in[0][104]"/>
+        <net name="in[0][103]"/>
+        <net name="in[0][102]"/>
+        <net name="in[0][101]"/>
+        <net name="in[0][100]"/>
+        <net name="in[0][99]"/>
+        <net name="in[0][98]"/>
+        <net name="in[0][97]"/>
+        <net name="in[0][96]"/>
+        <net name="in[0][95]"/>
+        <net name="in[0][94]"/>
+        <net name="in[0][93]"/>
+        <net name="in[0][92]"/>
+        <net name="in[0][91]"/>
+        <net name="in[0][90]"/>
+        <net name="in[0][89]"/>
+        <net name="in[0][88]"/>
+        <net name="in[0][87]"/>
+        <net name="in[0][86]"/>
+        <net name="in[0][85]"/>
+        <net name="in[0][84]"/>
+        <net name="in[0][83]"/>
+        <net name="in[0][82]"/>
+        <net name="in[0][81]"/>
+        <net name="in[0][80]"/>
+        <net name="in[0][79]"/>
+        <net name="in[0][78]"/>
+        <net name="in[0][77]"/>
+        <net name="in[0][76]"/>
+        <net name="in[0][75]"/>
+        <net name="in[0][74]"/>
+        <net name="in[0][73]"/>
+        <net name="in[0][72]"/>
+        <net name="in[0][71]"/>
+        <net name="in[0][70]"/>
+        <net name="in[0][69]"/>
+        <net name="in[0][68]"/>
+        <net name="in[0][67]"/>
+        <net name="in[0][66]"/>
+        <net name="in[0][65]"/>
+        <net name="in[0][64]"/>
+        <net name="in[0][63]"/>
+        <net name="in[0][62]"/>
+        <net name="in[0][61]"/>
+        <net name="in[0][60]"/>
+        <net name="in[0][59]"/>
+        <net name="in[0][58]"/>
+        <net name="in[0][57]"/>
+        <net name="in[0][56]"/>
+        <net name="in[0][55]"/>
+        <net name="in[0][54]"/>
+        <net name="in[0][53]"/>
+        <net name="in[0][52]"/>
+        <net name="in[0][51]"/>
+        <net name="in[0][50]"/>
+        <net name="in[0][49]"/>
+        <net name="in[0][48]"/>
+        <net name="in[0][47]"/>
+        <net name="in[0][46]"/>
+        <net name="in[0][45]"/>
+        <net name="in[0][44]"/>
+        <net name="in[0][43]"/>
+        <net name="in[0][42]"/>
+        <net name="in[0][41]"/>
+        <net name="in[0][40]"/>
+        <net name="in[0][39]"/>
+        <net name="in[0][38]"/>
+        <net name="in[0][37]"/>
+        <net name="in[0][36]"/>
+        <net name="in[0][35]"/>
+        <net name="in[0][34]"/>
+        <net name="in[0][33]"/>
+        <net name="in[0][32]"/>
+        <net name="in[0][31]"/>
+        <net name="in[0][30]"/>
+        <net name="in[0][29]"/>
+        <net name="in[0][28]"/>
+        <net name="in[0][27]"/>
+        <net name="in[0][26]"/>
+        <net name="in[0][25]"/>
+        <net name="in[0][24]"/>
+        <net name="in[0][23]"/>
+        <net name="in[0][22]"/>
+        <net name="in[0][21]"/>
+        <net name="in[0][20]"/>
+        <net name="in[0][19]"/>
+        <net name="in[0][18]"/>
+        <net name="in[0][17]"/>
+        <net name="in[0][16]"/>
+        <net name="in[0][15]"/>
+        <net name="in[0][14]"/>
+        <net name="in[0][13]"/>
+        <net name="in[0][12]"/>
+        <net name="in[0][11]"/>
+        <net name="in[0][10]"/>
+        <net name="in[0][9]"/>
+        <net name="in[0][8]"/>
+        <net name="in[0][7]"/>
+        <net name="in[0][6]"/>
+        <net name="in[0][5]"/>
+        <net name="in[0][4]"/>
+        <net name="in[0][3]"/>
+        <net name="in[0][2]"/>
+        <net name="in[0][1]"/>
+        <net name="in[0][0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[127:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
         <net name="in[127]"/>
         <net name="in[126]"/>
         <net name="in[125]"/>
@@ -792,6 +1294,154 @@
         <net name="in[0]"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[127:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq128&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="in[1][127]"/>
+        <net name="in[1][126]"/>
+        <net name="in[1][125]"/>
+        <net name="in[1][124]"/>
+        <net name="in[1][123]"/>
+        <net name="in[1][122]"/>
+        <net name="in[1][121]"/>
+        <net name="in[1][120]"/>
+        <net name="in[1][119]"/>
+        <net name="in[1][118]"/>
+        <net name="in[1][117]"/>
+        <net name="in[1][116]"/>
+        <net name="in[1][115]"/>
+        <net name="in[1][114]"/>
+        <net name="in[1][113]"/>
+        <net name="in[1][112]"/>
+        <net name="in[1][111]"/>
+        <net name="in[1][110]"/>
+        <net name="in[1][109]"/>
+        <net name="in[1][108]"/>
+        <net name="in[1][107]"/>
+        <net name="in[1][106]"/>
+        <net name="in[1][105]"/>
+        <net name="in[1][104]"/>
+        <net name="in[1][103]"/>
+        <net name="in[1][102]"/>
+        <net name="in[1][101]"/>
+        <net name="in[1][100]"/>
+        <net name="in[1][99]"/>
+        <net name="in[1][98]"/>
+        <net name="in[1][97]"/>
+        <net name="in[1][96]"/>
+        <net name="in[1][95]"/>
+        <net name="in[1][94]"/>
+        <net name="in[1][93]"/>
+        <net name="in[1][92]"/>
+        <net name="in[1][91]"/>
+        <net name="in[1][90]"/>
+        <net name="in[1][89]"/>
+        <net name="in[1][88]"/>
+        <net name="in[1][87]"/>
+        <net name="in[1][86]"/>
+        <net name="in[1][85]"/>
+        <net name="in[1][84]"/>
+        <net name="in[1][83]"/>
+        <net name="in[1][82]"/>
+        <net name="in[1][81]"/>
+        <net name="in[1][80]"/>
+        <net name="in[1][79]"/>
+        <net name="in[1][78]"/>
+        <net name="in[1][77]"/>
+        <net name="in[1][76]"/>
+        <net name="in[1][75]"/>
+        <net name="in[1][74]"/>
+        <net name="in[1][73]"/>
+        <net name="in[1][72]"/>
+        <net name="in[1][71]"/>
+        <net name="in[1][70]"/>
+        <net name="in[1][69]"/>
+        <net name="in[1][68]"/>
+        <net name="in[1][67]"/>
+        <net name="in[1][66]"/>
+        <net name="in[1][65]"/>
+        <net name="in[1][64]"/>
+        <net name="in[1][63]"/>
+        <net name="in[1][62]"/>
+        <net name="in[1][61]"/>
+        <net name="in[1][60]"/>
+        <net name="in[1][59]"/>
+        <net name="in[1][58]"/>
+        <net name="in[1][57]"/>
+        <net name="in[1][56]"/>
+        <net name="in[1][55]"/>
+        <net name="in[1][54]"/>
+        <net name="in[1][53]"/>
+        <net name="in[1][52]"/>
+        <net name="in[1][51]"/>
+        <net name="in[1][50]"/>
+        <net name="in[1][49]"/>
+        <net name="in[1][48]"/>
+        <net name="in[1][47]"/>
+        <net name="in[1][46]"/>
+        <net name="in[1][45]"/>
+        <net name="in[1][44]"/>
+        <net name="in[1][43]"/>
+        <net name="in[1][42]"/>
+        <net name="in[1][41]"/>
+        <net name="in[1][40]"/>
+        <net name="in[1][39]"/>
+        <net name="in[1][38]"/>
+        <net name="in[1][37]"/>
+        <net name="in[1][36]"/>
+        <net name="in[1][35]"/>
+        <net name="in[1][34]"/>
+        <net name="in[1][33]"/>
+        <net name="in[1][32]"/>
+        <net name="in[1][31]"/>
+        <net name="in[1][30]"/>
+        <net name="in[1][29]"/>
+        <net name="in[1][28]"/>
+        <net name="in[1][27]"/>
+        <net name="in[1][26]"/>
+        <net name="in[1][25]"/>
+        <net name="in[1][24]"/>
+        <net name="in[1][23]"/>
+        <net name="in[1][22]"/>
+        <net name="in[1][21]"/>
+        <net name="in[1][20]"/>
+        <net name="in[1][19]"/>
+        <net name="in[1][18]"/>
+        <net name="in[1][17]"/>
+        <net name="in[1][16]"/>
+        <net name="in[1][15]"/>
+        <net name="in[1][14]"/>
+        <net name="in[1][13]"/>
+        <net name="in[1][12]"/>
+        <net name="in[1][11]"/>
+        <net name="in[1][10]"/>
+        <net name="in[1][9]"/>
+        <net name="in[1][8]"/>
+        <net name="in[1][7]"/>
+        <net name="in[1][6]"/>
+        <net name="in[1][5]"/>
+        <net name="in[1][4]"/>
+        <net name="in[1][3]"/>
+        <net name="in[1][2]"/>
+        <net name="in[1][1]"/>
+        <net name="in[1][0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
@@ -823,7 +1473,7 @@
         <Option Id="DISPLAY_VISIBILITY" value=""/>
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
-        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="MAP" value="probe6[0]"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>

@@ -15,32 +15,63 @@
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="179"></NameColumnWidth>
-      <ValueColumnWidth column_width="272"></ValueColumnWidth>
+      <ValueColumnWidth column_width="268"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
+   <WVObjectSize size="7" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="addra">
+   <wvobject type="array" fp_name="addra[0]">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">addra[0:0]</obj_property>
-      <obj_property name="ObjectShortName">addra[0:0]</obj_property>
+      <obj_property name="ElementShortName">addra[0][8:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[0][8:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="encrypted128">
+   <wvobject type="array" fp_name="addra[1]">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">encrypted128[127:0]</obj_property>
-      <obj_property name="ObjectShortName">encrypted128[127:0]</obj_property>
+      <obj_property name="ElementShortName">addra[1][8:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[1][8:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="in">
+   <wvobject type="array" fp_name="encrypted128[0]">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">in[127:0]</obj_property>
-      <obj_property name="ObjectShortName">in[127:0]</obj_property>
+      <obj_property name="ElementShortName">encrypted128[0][127:0]</obj_property>
+      <obj_property name="ObjectShortName">encrypted128[0][127:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="encrypted128[1]">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">encrypted128[1][127:0]</obj_property>
+      <obj_property name="ObjectShortName">encrypted128[1][127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="in[0]">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">in[0][127:0]</obj_property>
+      <obj_property name="ObjectShortName">in[0][127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="in[1]">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">in[1][127:0]</obj_property>
+      <obj_property name="ObjectShortName">in[1][127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="reset_1">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">reset_1</obj_property>
+      <obj_property name="ObjectShortName">reset_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
