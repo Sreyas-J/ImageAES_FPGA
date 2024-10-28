@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Mon Oct 28 11:22:04 2024
+| Date             : Mon Oct 28 15:46:38 2024
 | Host             : dell-Inspiron-5415 running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file AES_power_routed.rpt -pb AES_power_summary_routed.pb -rpx AES_power_routed.rpx
 | Design           : AES
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.505        |
+| Total On-Chip Power (W)  | 0.153        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.435        |
-| Device Static (W)        | 0.070        |
+| Dynamic (W)              | 0.084        |
+| Device Static (W)        | 0.069        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 82.5         |
-| Junction Temperature (C) | 27.5         |
+| Max Ambient (C)          | 84.2         |
+| Junction Temperature (C) | 25.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |     0.239 |    15863 |       --- |             --- |
-|   LUT as Logic           |     0.230 |     7617 |     20800 |           36.62 |
-|   F7/F8 Muxes            |     0.008 |     3861 |     32600 |           11.84 |
-|   LUT as Shift Register  |    <0.001 |      319 |      9600 |            3.32 |
-|   Register               |    <0.001 |     2895 |     41600 |            6.96 |
-|   CARRY4                 |    <0.001 |       59 |      8150 |            0.72 |
+| Clocks                   |     0.001 |        3 |       --- |             --- |
+| Slice Logic              |     0.046 |    17715 |       --- |             --- |
+|   LUT as Logic           |     0.042 |     7872 |     20800 |           37.85 |
+|   F7/F8 Muxes            |     0.003 |     3862 |     32600 |           11.85 |
+|   Register               |    <0.001 |     4476 |     41600 |           10.76 |
+|   LUT as Shift Register  |    <0.001 |      325 |      9600 |            3.39 |
+|   CARRY4                 |    <0.001 |       61 |      8150 |            0.75 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      9600 |            0.25 |
-|   Others                 |     0.000 |      310 |       --- |             --- |
-| Signals                  |     0.195 |     6759 |       --- |             --- |
+|   Others                 |     0.000 |      332 |       --- |             --- |
+| Signals                  |     0.036 |     7291 |       --- |             --- |
 | Block RAM                |    <0.001 |      9.5 |        50 |           19.00 |
 | I/O                      |    <0.001 |        1 |       106 |            0.94 |
-| Static Power             |     0.070 |          |           |                 |
-| Total                    |     0.505 |          |           |                 |
+| Static Power             |     0.069 |          |           |                 |
+| Total                    |     0.153 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.446 |       0.435 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.094 |       0.084 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,36 +145,33 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| AES                      |     0.435 |
-|   BRAM                   |     0.003 |
-|     U0                   |     0.003 |
-|       inst_blk_mem_gen   |     0.003 |
-|   a                      |     0.428 |
-|     loop[1].er           |     0.390 |
-|       s                  |     0.390 |
-|     loop[2].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[3].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[4].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[5].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[6].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[7].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[8].er           |     0.004 |
-|       s                  |     0.004 |
-|     loop[9].er           |     0.004 |
-|       s                  |     0.004 |
-|     sb                   |     0.005 |
+| AES                      |     0.084 |
+|   a                      |     0.078 |
+|     loop[1].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[2].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[3].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[4].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[5].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[6].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[7].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[8].er           |     0.006 |
+|       s                  |     0.006 |
+|     loop[9].er           |     0.006 |
+|       s                  |     0.006 |
+|     sb                   |     0.004 |
 |   dbg_hub                |     0.001 |
 |     inst                 |     0.001 |
 |       BSCANID.u_xsdbm_id |     0.001 |
-|   ila0                   |     0.004 |
-|     inst                 |     0.004 |
-|       ila_core_inst      |     0.004 |
+|   ila0                   |     0.003 |
+|     inst                 |     0.003 |
+|       ila_core_inst      |     0.003 |
 +--------------------------+-----------+
 
 

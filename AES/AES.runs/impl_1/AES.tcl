@@ -140,6 +140,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/AES.dcp
+  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/vio_0/vio_0.xci
   read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/ila_0/ila_0.xci
   read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 OPTRACE "read constraints: implementation" START { }

@@ -15,15 +15,16 @@
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="179"></NameColumnWidth>
-      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+      <ValueColumnWidth column_width="272"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="logic" fp_name="addra">
+   <wvobject type="array" fp_name="addra">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">addra</obj_property>
-      <obj_property name="ObjectShortName">addra</obj_property>
+      <obj_property name="ElementShortName">addra[0:0]</obj_property>
+      <obj_property name="ObjectShortName">addra[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

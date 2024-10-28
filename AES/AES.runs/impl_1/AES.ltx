@@ -438,7 +438,12 @@
                                 "nets": [
                                     {
                                         "name": "addra",
-                                        "isBus": false
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "addra[0]"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -841,6 +846,52 @@
                                                 "name": "encrypted128[0]"
                                             }
                                         ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "reset_1",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "vio0",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "55628FB7A6725A26BB8359684D11EA49",
+                        "pins": [
+                            {
+                                "name": "probe_out0",
+                                "id": 4,
+                                "type": "DATA",
+                                "direction": "OUT",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "reset",
+                                        "isBus": false
                                     }
                                 ]
                             }
