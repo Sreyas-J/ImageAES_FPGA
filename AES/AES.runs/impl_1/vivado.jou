@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sun Oct 27 17:34:58 2024
-# Process ID: 479480
+# Start of session at: Mon Oct 28 11:20:22 2024
+# Process ID: 4278
 # Current directory: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1
 # Command line: vivado -log AES.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source AES.tcl -notrace
 # Log file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.vdi
 # Journal file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/vivado.jou
-# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 400.000 MHz, CPU Physical cores: 12, Host memory: 7635 MB
+# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 2690.093 MHz, CPU Physical cores: 12, Host memory: 7635 MB
 #-----------------------------------------------------------
 source AES.tcl -notrace

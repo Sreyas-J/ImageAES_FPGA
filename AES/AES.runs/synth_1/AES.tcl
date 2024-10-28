@@ -72,7 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -89,6 +88,8 @@ set_property ip_output_repo /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/image128.coe
+add_files /home/dell/Documents/seq.coe
 read_verilog -library xil_defaultlib {
   /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES_Encryption.v
   /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/encryptHelper.v

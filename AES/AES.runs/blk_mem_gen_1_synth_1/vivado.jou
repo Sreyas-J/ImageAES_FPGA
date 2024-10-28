@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Sun Oct 27 17:07:58 2024
-# Process ID: 392988
+# Start of session at: Sun Oct 27 18:36:26 2024
+# Process ID: 527205
 # Current directory: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/blk_mem_gen_1_synth_1
 # Command line: vivado -log blk_mem_gen_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_gen_1.tcl
 # Log file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/blk_mem_gen_1_synth_1/blk_mem_gen_1.vds
 # Journal file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/blk_mem_gen_1_synth_1/vivado.jou
-# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 1573.253 MHz, CPU Physical cores: 12, Host memory: 7635 MB
+# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 3548.990 MHz, CPU Physical cores: 12, Host memory: 7635 MB
 #-----------------------------------------------------------
 source blk_mem_gen_1.tcl -notrace
