@@ -1,19 +1,15 @@
 module AES_Encrypt(
     input clk,
     input [127:0] in,
-    input [127:0] key,
+    input [(128*11)-1:0] fullkeys,
     output wire [127:0] out
 );
 
-    wire [(128*11)-1:0] fullkeys;
     reg [127:0] states [11:0];
     wire [127:0] buff;
     wire [127:0] afterSubBytes;
     wire [127:0] afterShiftRows;
     wire [127:0] encryptOut [10:0]; // Wires for storing intermediate encryptRound outputs
-
-    // Key Expansion
-    keyExpansion ke (key, fullkeys);
 
     // Initial Round
     addRoundKey addrk1 (in, encryptOut[0], fullkeys[((128*11)-1)-:128]);

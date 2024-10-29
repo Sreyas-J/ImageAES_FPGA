@@ -70,13 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "ila_0_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 3
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
-create_project -in_memory -part xc7a35tcpg236-1
+create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -87,6 +84,7 @@ set_property parent.project_path /home/dell/Desktop/FPGA/VivadoProjects/FPGA_pro
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
 set_property ip_output_repo /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -118,7 +116,7 @@ if { $cacheID == "" } {
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top ila_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+synth_design -top ila_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
 OPTRACE "synth_design" END { }
 OPTRACE "Write IP Cache" START { }
 

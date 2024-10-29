@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Mon Oct 28 16:45:44 2024
+// Date        : Mon Oct 28 16:45:41 2024
 // Host        : dell-Inspiron-5415 running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.gen/sources_1/ip/ila_0/ila_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ila_0 -prefix
+//               ila_0_ ila_0_stub.v
 // Design      : ila_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

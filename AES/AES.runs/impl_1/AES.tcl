@@ -122,12 +122,11 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 3
-  set_param runs.launchOptions { -jobs 9  }
+  set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7a35tcpg236-1
+  create_project -in_memory -part xc7z020clg484-1
+  set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
@@ -148,7 +147,7 @@ OPTRACE "read constraints: implementation" START { }
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
-  link_design -top AES -part xc7a35tcpg236-1 
+  link_design -top AES -part xc7z020clg484-1 
 OPTRACE "link_design" END { }
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }

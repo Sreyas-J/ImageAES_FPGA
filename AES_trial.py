@@ -7,49 +7,36 @@ def generate_key():
     return os.urandom(16)  # AES-128 uses a 16-byte key
 
 # Encrypt function
-def encrypt_file(input_file, output_file, key):
+def encrypt_text(plaintext, key):
     cipher = AES.new(key, AES.MODE_CBC)
-    with open(input_file, 'rb') as f:
-        plaintext = f.read()
     
     # Pad plaintext to be a multiple of 16 bytes
-    padded_plaintext = pad(plaintext, AES.block_size)
+    padded_plaintext = pad(plaintext.encode(), AES.block_size)
     
-    # Write the IV to the beginning of the output file
-    with open(output_file, 'wb') as f:
-        f.write(cipher.iv)  # Write the IV for decryption
-        ciphertext = cipher.encrypt(padded_plaintext)
-        f.write(ciphertext)
+    # Encrypt and return the IV + ciphertext
+    return cipher.iv + cipher.encrypt(padded_plaintext)
 
 # Decrypt function
-def decrypt_file(input_file, output_file, key):
-    with open(input_file, 'rb') as f:
-        iv = f.read(16)  # Read the IV from the beginning
-        ciphertext = f.read()
+def decrypt_text(ciphertext, key):
+    # Separate the IV and ciphertext
+    iv = ciphertext[:16]
+    ciphertext = ciphertext[16:]
 
+    # Create a new cipher with the same key and IV for decryption
     cipher = AES.new(key, AES.MODE_CBC, iv)
     padded_plaintext = cipher.decrypt(ciphertext)
 
     # Unpad plaintext
-    plaintext = unpad(padded_plaintext, AES.block_size)
-
-    # Write the decrypted content to the output file
-    with open(output_file, 'wb') as f:
-        f.write(plaintext)
+    plaintext = unpad(padded_plaintext, AES.block_size).decode()
+    return plaintext
 
 if __name__ == "__main__":
-    # Input and output file paths
-    input_file = 'led.bit'
-    encrypted_file = 'led_enc.bit'
-    decrypted_file = 'led_decrypted.bit'
+    # Define the plaintext to encrypt
+    plaintext = "0707070909080a0c140d0c0b0b0c1912"
 
-    # Generate a random key for encryption/decryption
-    key = generate_key()
+    # Generate or define a key (key must be 16 bytes for AES-128)
+    key = bytes.fromhex('000102030405060708090a0b0c0d0e0f') # ensure this is bytes, not a string
 
-    # Encrypt the file
-    encrypt_file(input_file, encrypted_file, key)
-    print(f"Encrypted {input_file} to {encrypted_file}")
-
-    # Decrypt the file
-    decrypt_file(encrypted_file, decrypted_file, key)
-    print(f"Decrypted {encrypted_file} to {decrypted_file}")
+    # Decrypt the text
+    decrypted_text = decrypt_text(plaintext, key)
+    print(f"Decrypted text: {decrypted_text}")

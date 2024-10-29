@@ -23,7 +23,7 @@ def encrypt_data(plaintext_hex, key):
         return f"Error: {e}"
 
 # Input 128-bit text to be encrypted, in hexadecimal format
-plaintext_hex = "0707070909080A0C140D0C0B0B0C1912"
+plaintext_hex = "130f141d1a1f1e1d1a1c1c20242e2720"
 
 # Ensure the input length is correct
 if len(plaintext_hex) == 32:

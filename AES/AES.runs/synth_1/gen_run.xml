@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1730114067" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/AES.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="AES_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1730192546" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/AES.dcp">
   <File Type="RDS-DCP" Name="AES.dcp"/>
   <File Type="RDS-UTIL-PB" Name="AES_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="AES_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="AES_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="AES.vds"/>
-  <File Type="REPORTS-TCL" Name="AES_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="AES_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="AES.tcl"/>
+  <File Type="RDS-UTIL" Name="AES_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="AES_reports.tcl"/>
+  <File Type="RDS-RDS" Name="AES.vds"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/ip/vio_0/vio_0.xci">
@@ -97,6 +94,8 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_1"/>
+        <Attr Name="UsedInSteps" Val="synth_1_copy_2"/>
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
@@ -108,6 +107,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
 </GenRun>

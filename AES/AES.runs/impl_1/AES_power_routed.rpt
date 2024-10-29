@@ -1,11 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Mon Oct 28 16:52:57 2024
+| Date             : Tue Oct 29 14:40:15 2024
 | Host             : dell-Inspiron-5415 running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file AES_power_routed.rpt -pb AES_power_summary_routed.pb -rpx AES_power_routed.rpx
 | Design           : AES
-| Device           : xc7a35tcpg236-1
+| Device           : xc7z020clg484-1
 | Design State     : routed
 | Grade            : commercial
 | Process          : typical
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.640        |
+| Total On-Chip Power (W)  | 0.727        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.569        |
-| Device Static (W)        | 0.071        |
-| Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 81.8         |
-| Junction Temperature (C) | 28.2         |
+| Dynamic (W)              | 0.613        |
+| Device Static (W)        | 0.114        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 76.6         |
+| Junction Temperature (C) | 33.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.032 |        4 |       --- |             --- |
-| Slice Logic              |     0.280 |    31896 |       --- |             --- |
-|   LUT as Logic           |     0.252 |    14664 |     20800 |           70.50 |
-|   F7/F8 Muxes            |     0.020 |     7779 |     32600 |           23.86 |
-|   Register               |     0.004 |     6998 |     41600 |           16.82 |
-|   LUT as Shift Register  |     0.004 |      605 |      9600 |            6.30 |
-|   CARRY4                 |    <0.001 |       99 |      8150 |            1.21 |
-|   LUT as Distributed RAM |    <0.001 |       24 |      9600 |            0.25 |
+| Clocks                   |     0.033 |        4 |       --- |             --- |
+| Slice Logic              |     0.296 |    32112 |       --- |             --- |
+|   LUT as Logic           |     0.268 |    15035 |     53200 |           28.26 |
+|   F7/F8 Muxes            |     0.019 |     7779 |     53200 |           14.62 |
+|   Register               |     0.004 |     6998 |    106400 |            6.58 |
+|   LUT as Shift Register  |     0.004 |      605 |     17400 |            3.48 |
+|   CARRY4                 |    <0.001 |       99 |     13300 |            0.74 |
+|   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   Others                 |     0.000 |      456 |       --- |             --- |
-| Signals                  |     0.231 |    11853 |       --- |             --- |
-| Block RAM                |     0.027 |     19.5 |        50 |           39.00 |
-| I/O                      |    <0.001 |        1 |       106 |            0.94 |
-| Static Power             |     0.071 |          |           |                 |
-| Total                    |     0.640 |          |           |                 |
+| Signals                  |     0.257 |    13802 |       --- |             --- |
+| Block RAM                |     0.027 |     19.5 |       140 |           13.93 |
+| I/O                      |    <0.001 |        1 |       200 |            0.50 |
+| Static Power             |     0.114 |          |           |                 |
+| Total                    |     0.727 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,8 +75,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.578 |       0.567 |      0.011 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.621 |       0.611 |      0.010 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.012 |       0.000 |      0.012 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -87,6 +87,13 @@ Table of Contents
 | Vccbram   |       1.000 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.021 |       0.000 |      0.021 |       NA    | Unspecified | NA         |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
@@ -113,16 +120,16 @@ Table of Contents
 2.1 Environment
 ---------------
 
-+-----------------------+--------------------------+
-| Ambient Temp (C)      | 25.0                     |
-| ThetaJA (C/W)         | 5.0                      |
-| Airflow (LFM)         | 250                      |
-| Heat Sink             | medium (Medium Profile)  |
-| ThetaSA (C/W)         | 4.6                      |
-| Board Selection       | medium (10"x10")         |
-| # of Board Layers     | 12to15 (12 to 15 Layers) |
-| Board Temperature (C) | 25.0                     |
-+-----------------------+--------------------------+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
 
 
 2.2 Clock Constraints
@@ -145,53 +152,50 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| AES                      |     0.569 |
-|   BRAM0                  |     0.010 |
-|     U0                   |     0.010 |
-|       inst_blk_mem_gen   |     0.010 |
-|   BRAM1                  |     0.011 |
-|     U0                   |     0.011 |
-|       inst_blk_mem_gen   |     0.011 |
-|   a                      |     0.246 |
-|     loop[1].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[2].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[3].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[4].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[5].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[6].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[7].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[8].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[9].er           |     0.018 |
-|       s                  |     0.018 |
+| AES                      |     0.613 |
+|   BRAM0                  |     0.022 |
+|     U0                   |     0.022 |
+|       inst_blk_mem_gen   |     0.022 |
+|   a                      |     0.267 |
+|     loop[1].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[2].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[3].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[4].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[5].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[6].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[7].er           |     0.021 |
+|       s                  |     0.021 |
+|     loop[8].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[9].er           |     0.020 |
+|       s                  |     0.020 |
 |     sb                   |     0.013 |
-|   b                      |     0.248 |
-|     loop[1].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[2].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[3].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[4].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[5].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[6].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[7].er           |     0.019 |
-|       s                  |     0.019 |
-|     loop[8].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[9].er           |     0.018 |
-|       s                  |     0.018 |
-|     sb                   |     0.012 |
+|   b                      |     0.269 |
+|     loop[1].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[2].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[3].er           |     0.021 |
+|       s                  |     0.021 |
+|     loop[4].er           |     0.021 |
+|       s                  |     0.021 |
+|     loop[5].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[6].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[7].er           |     0.021 |
+|       s                  |     0.021 |
+|     loop[8].er           |     0.020 |
+|       s                  |     0.020 |
+|     loop[9].er           |     0.020 |
+|       s                  |     0.020 |
+|     sb                   |     0.013 |
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
