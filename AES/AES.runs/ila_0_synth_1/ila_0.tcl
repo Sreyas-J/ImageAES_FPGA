@@ -84,7 +84,8 @@ set_property parent.project_path /home/dell/Desktop/FPGA/VivadoProjects/FPGA_pro
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
+set_property board_part_repo_paths {/home/dell/.Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
 set_property ip_output_repo /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

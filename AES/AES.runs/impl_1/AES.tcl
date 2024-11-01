@@ -123,10 +123,11 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  set_param runs.launchOptions { -jobs 8  }
+  set_param runs.launchOptions { -jobs 10  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
-  set_property board_part xilinx.com:zc702:part0:1.4 [current_project]
+  set_property board_part_repo_paths {/home/dell/.Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
+  set_property board_part avnet.com:zedboard:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
@@ -139,9 +140,11 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/AES.dcp
-  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/vio_0/vio_0.xci
+  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci
+  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/blk_mem_gen_1_1/blk_mem_gen_1.xci
+  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/blk_mem_gen_2_1/blk_mem_gen_2.xci
   read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/ila_0/ila_0.xci
-  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+  read_ip -quiet /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/ip/vio_0/vio_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
