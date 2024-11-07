@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1730447874" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/AES.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1730975511" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/AES.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="AES_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="AES.dcp"/>
   <File Type="RDS-UTIL-PB" Name="AES_utilization_synth.pb"/>
@@ -53,12 +53,6 @@
         <Attr Name="ImportTime" Val="1730021423"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../image128.coe">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -121,8 +115,8 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
   <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
 </GenRun>

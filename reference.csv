@@ -1,0 +1,2 @@
+Sample in Buffer,Sample in Window,TRIGGER,douta1[127:0],encrypted128[0][127:0],addra[0][6:0],douta2[127:0],encrypted128[1][127:0],addra[1][6:0],reset_1,encrypted128[2][127:0],encrypted128[3][127:0],encrypted128[4][127:0],encrypted128[5][127:0],in[0][127:0],in[1][127:0],in[2][127:0],in[3][127:0],in[4][127:0],in[5][127:0],done
+Radix - UNSIGNED,UNSIGNED,UNSIGNED,HEX,HEX,UNSIGNED,HEX,HEX,UNSIGNED,HEX,HEX,HEX,HEX,HEX,HEX,HEX,HEX,HEX,HEX,HEX,HEX

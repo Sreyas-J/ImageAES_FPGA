@@ -15,12 +15,12 @@ def decrypt_data(encrypted_hex, key):
         return None  # Return None if data is invalid or cannot be decrypted
 
 # Load the CSV file
-file_path = 'iladata.csv'
+file_path = 'recombined_output.csv'
 output_file_path = 'decrypted_data.csv'
 
 # Load the CSV file, skipping the first row if needed
 data_df = pd.read_csv(file_path)
-encrypted_data_column = data_df['encrypted128[127:0]'].iloc[1:]  # Skip the header row
+encrypted_data_column = data_df.iloc[:-1, 0]
 
 # Decrypt the data
 decrypted_data = []
