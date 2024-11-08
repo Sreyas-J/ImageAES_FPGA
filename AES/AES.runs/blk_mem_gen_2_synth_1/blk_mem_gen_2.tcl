@@ -81,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.cache/wt [current_project]
 set_property parent.project_path /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {/home/dell/.Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]

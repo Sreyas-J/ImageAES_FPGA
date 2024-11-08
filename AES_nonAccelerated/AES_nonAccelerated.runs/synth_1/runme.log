@@ -1,0 +1,516 @@
+
+*** Running vivado
+    with args -log AES.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source AES.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1329.406 ; gain = 0.023 ; free physical = 1822 ; free virtual = 3435
+Command: read_checkpoint -auto_incremental -incremental /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/utils_1/imports/synth_1/AES.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/utils_1/imports/synth_1/AES.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top AES -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 99536
+INFO: [Synth 8-11241] undeclared symbol 'dina', assumed default net type 'wire' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:22]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2075.590 ; gain = 378.730 ; free physical = 733 ; free virtual = 2395
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AES' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:1]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/.Xil/Vivado-99502-dell-Inspiron-5415/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/.Xil/Vivado-99502-dell-Inspiron-5415/realtime/blk_mem_gen_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:26]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/.Xil/Vivado-99502-dell-Inspiron-5415/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/.Xil/Vivado-99502-dell-Inspiron-5415/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'AES_Encrypt' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES_Encryption.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encryptRound' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:1]
+INFO: [Synth 8-6157] synthesizing module 'subBytes' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:96]
+INFO: [Synth 8-6157] synthesizing module 'sbox' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/sbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'sbox' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/sbox.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'subBytes' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:96]
+INFO: [Synth 8-6157] synthesizing module 'shiftRows' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'shiftRows' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:66]
+INFO: [Synth 8-6157] synthesizing module 'mixColumns' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'mixColumns' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:17]
+INFO: [Synth 8-6157] synthesizing module 'addRoundKey' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/helper.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addRoundKey' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/helper.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'encryptRound' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/encryptHelper.v:1]
+INFO: [Synth 8-6157] synthesizing module 'keyExpansion' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/helper.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'keyExpansion' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/helper.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'AES_Encrypt' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES_Encryption.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/.Xil/Vivado-99502-dell-Inspiron-5415/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/.Xil/Vivado-99502-dell-Inspiron-5415/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AES' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:1]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio0'. This will prevent further optimization [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:39]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila0'. This will prevent further optimization [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:26]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'BRAM'. This will prevent further optimization [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:17]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'a'. This will prevent further optimization [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:37]
+WARNING: [Synth 8-3848] Net dina in module/entity AES does not have driver. [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/sources_1/imports/new/AES.v:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2191.527 ; gain = 494.668 ; free physical = 546 ; free virtual = 2227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2200.434 ; gain = 503.574 ; free physical = 546 ; free virtual = 2227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2200.434 ; gain = 503.574 ; free physical = 546 ; free virtual = 2227
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2200.434 ; gain = 0.000 ; free physical = 547 ; free virtual = 2227
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'BRAM'
+Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'BRAM'
+Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila0'
+Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila0'
+Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio0'
+Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio0'
+Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AES_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/AES_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2333.215 ; gain = 0.000 ; free physical = 544 ; free virtual = 2229
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2333.215 ; gain = 0.000 ; free physical = 544 ; free virtual = 2229
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2333.215 ; gain = 636.355 ; free physical = 549 ; free virtual = 2231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2333.215 ; gain = 636.355 ; free physical = 549 ; free virtual = 2231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for BRAM. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ila0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for vio0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2333.215 ; gain = 636.355 ; free physical = 549 ; free virtual = 2231
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2333.215 ; gain = 636.355 ; free physical = 544 ; free virtual = 2229
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 11    
+	   3 Input     32 Bit         XORs := 10    
+	   2 Input     32 Bit         XORs := 30    
+	   2 Input      8 Bit         XORs := 180   
+	   3 Input      8 Bit         XORs := 90    
+	   5 Input      8 Bit         XORs := 54    
+	   4 Input      8 Bit         XORs := 18    
++---Registers : 
+	              128 Bit    Registers := 10    
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 144   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:09 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 334 ; free virtual = 2122
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------+----------------------+---------------+----------------+
+|Module Name  | RTL Object           | Depth x Width | Implemented As | 
++-------------+----------------------+---------------+----------------+
+|sbox         | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[56].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[72].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[24].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[32].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[40].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[48].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[104].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|keyExpansion | c                    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[8].s/c     | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[16].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[24].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[32].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[40].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[48].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[56].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[64].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[72].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[80].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[88].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[96].s/c    | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[104].s/c   | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[112].s/c   | 256x8         | LUT            | 
+|subBytes     | sub_Bytes[120].s/c   | 256x8         | LUT            | 
++-------------+----------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:12 ; elapsed = 00:02:14 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 313 ; free virtual = 2109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:02:14 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 316 ; free virtual = 2111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:14 ; elapsed = 00:02:16 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 315 ; free virtual = 2111
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module BRAM has unconnected pin dina[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 327 ; free virtual = 2123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:19 ; elapsed = 00:02:20 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:19 ; elapsed = 00:02:20 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:19 ; elapsed = 00:02:20 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
+|2     |ila_0         |         1|
+|3     |vio_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |ila         |     1|
+|3     |vio         |     1|
+|4     |BUFG        |     1|
+|5     |LUT1        |     1|
+|6     |LUT2        |   945|
+|7     |LUT3        |   183|
+|8     |LUT4        |    88|
+|9     |LUT5        |   359|
+|10    |LUT6        |  8005|
+|11    |MUXF7       |  3168|
+|12    |MUXF8       |  1539|
+|13    |FDRE        |  1289|
+|14    |IBUF        |     1|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:19 ; elapsed = 00:02:21 . Memory (MB): peak = 2378.941 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:15 ; elapsed = 00:02:18 . Memory (MB): peak = 2378.941 ; gain = 549.301 ; free physical = 328 ; free virtual = 2124
+Synthesis Optimization Complete : Time (s): cpu = 00:02:19 ; elapsed = 00:02:21 . Memory (MB): peak = 2378.949 ; gain = 682.082 ; free physical = 328 ; free virtual = 2124
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2378.949 ; gain = 0.000 ; free physical = 609 ; free virtual = 2405
+INFO: [Netlist 29-17] Analyzing 4707 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2410.957 ; gain = 0.000 ; free physical = 610 ; free virtual = 2406
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4f6f9b2f
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:27 . Memory (MB): peak = 2410.957 ; gain = 1062.566 ; free physical = 610 ; free virtual = 2406
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2104.731; main = 1810.892; forked = 410.420
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3358.906; main = 2410.961; forked = 979.961
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES_nonAccelerated/AES_nonAccelerated.runs/synth_1/AES.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AES_utilization_synth.rpt -pb AES_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  8 15:24:08 2024...

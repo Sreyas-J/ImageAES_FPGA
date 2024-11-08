@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Thu Nov  7 16:10:16 2024
+| Date             : Fri Nov  8 11:37:22 2024
 | Host             : dell-Inspiron-5415 running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file AES_power_routed.rpt -pb AES_power_summary_routed.pb -rpx AES_power_routed.rpx
 | Design           : AES
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.662        |
+| Total On-Chip Power (W)  | 2.098        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.523        |
-| Device Static (W)        | 0.139        |
+| Dynamic (W)              | 1.946        |
+| Device Static (W)        | 0.152        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 65.8         |
-| Junction Temperature (C) | 44.2         |
+| Max Ambient (C)          | 60.8         |
+| Junction Temperature (C) | 49.2         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.088 |        4 |       --- |             --- |
-| Slice Logic              |     0.730 |    90730 |       --- |             --- |
-|   LUT as Logic           |     0.666 |    43135 |     53200 |           81.08 |
-|   F7/F8 Muxes            |     0.049 |    23366 |     53200 |           43.92 |
-|   Register               |     0.009 |    17742 |    106400 |           16.67 |
-|   LUT as Shift Register  |     0.006 |     1897 |     17400 |           10.90 |
+| Clocks                   |     0.111 |        4 |       --- |             --- |
+| Slice Logic              |     0.924 |    90730 |       --- |             --- |
+|   LUT as Logic           |     0.843 |    43139 |     53200 |           81.09 |
+|   F7/F8 Muxes            |     0.063 |    23366 |     53200 |           43.92 |
+|   Register               |     0.011 |    17742 |    106400 |           16.67 |
+|   LUT as Shift Register  |     0.008 |     1897 |     17400 |           10.90 |
 |   CARRY4                 |    <0.001 |      271 |     13300 |            2.04 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   Others                 |     0.000 |     1001 |       --- |             --- |
-| Signals                  |     0.630 |    37242 |       --- |             --- |
-| Block RAM                |     0.076 |     63.5 |       140 |           45.36 |
+| Signals                  |     0.815 |    37241 |       --- |             --- |
+| Block RAM                |     0.096 |     63.5 |       140 |           45.36 |
 | I/O                      |    <0.001 |        1 |       200 |            0.50 |
-| Static Power             |     0.139 |          |           |                 |
-| Total                    |     1.662 |          |           |                 |
+| Static Power             |     0.152 |          |           |                 |
+| Total                    |     2.098 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,8 +75,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.534 |       1.518 |      0.017 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.959 |       1.939 |      0.021 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.017 |       0.000 |      0.017 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -84,11 +84,11 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.011 |       0.006 |      0.005 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.013 |       0.007 |      0.006 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.030 |       0.000 |      0.030 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.035 |       0.000 |      0.035 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,7 +138,7 @@ Table of Contents
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
 | Clock                                                                                      | Domain                                                            | Constraint (ns) |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
-| clk                                                                                        | clk                                                               |            10.7 |
+| clk                                                                                        | clk                                                               |             8.4 |
 | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK |            33.0 |
 +--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
 
@@ -152,139 +152,206 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| AES                      |     1.523 |
-|   BRAM0                  |     0.015 |
-|     U0                   |     0.015 |
-|       inst_blk_mem_gen   |     0.015 |
-|   BRAM1                  |     0.013 |
-|     U0                   |     0.013 |
-|       inst_blk_mem_gen   |     0.013 |
-|   BRAM2                  |     0.013 |
-|     U0                   |     0.013 |
-|       inst_blk_mem_gen   |     0.013 |
-|   a                      |     0.250 |
-|     loop[1].er           |     0.007 |
-|       s                  |     0.007 |
-|     loop[2].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[3].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[4].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[5].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[6].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[7].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[8].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[9].er           |     0.020 |
-|       s                  |     0.020 |
-|     sb                   |     0.013 |
-|   b                      |     0.252 |
-|     loop[1].er           |     0.006 |
-|       s                  |     0.006 |
-|     loop[2].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[3].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[4].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[5].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[6].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[7].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[8].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[9].er           |     0.021 |
-|       s                  |     0.021 |
-|     sb                   |     0.013 |
-|       sub_Bytes[120].s   |     0.001 |
-|   c                      |     0.214 |
-|     loop[2].er           |     0.002 |
-|       s                  |     0.002 |
-|     loop[3].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[4].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[5].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[6].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[7].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[8].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[9].er           |     0.021 |
-|       s                  |     0.021 |
-|     sb                   |     0.013 |
-|   d                      |     0.213 |
-|     loop[2].er           |     0.002 |
-|       s                  |     0.002 |
-|     loop[3].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[4].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[5].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[6].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[7].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[8].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[9].er           |     0.021 |
-|       s                  |     0.021 |
-|     sb                   |     0.013 |
-|   dbg_hub                |     0.003 |
-|     inst                 |     0.003 |
-|       BSCANID.u_xsdbm_id |     0.003 |
-|   e                      |     0.212 |
-|     loop[2].er           |     0.002 |
-|       s                  |     0.002 |
-|     loop[3].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[4].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[5].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[6].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[7].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[8].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[9].er           |     0.020 |
-|       s                  |     0.020 |
-|     sb                   |     0.013 |
-|   f                      |     0.214 |
-|     loop[2].er           |     0.002 |
-|       s                  |     0.002 |
-|     loop[3].er           |     0.018 |
-|       s                  |     0.018 |
-|     loop[4].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[5].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[6].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[7].er           |     0.020 |
-|       s                  |     0.020 |
-|     loop[8].er           |     0.021 |
-|       s                  |     0.021 |
-|     loop[9].er           |     0.021 |
-|       s                  |     0.021 |
-|     sb                   |     0.014 |
-|       sub_Bytes[120].s   |     0.001 |
+| AES                      |     1.946 |
+|   BRAM0                  |     0.019 |
+|     U0                   |     0.019 |
+|       inst_blk_mem_gen   |     0.019 |
+|   BRAM1                  |     0.017 |
+|     U0                   |     0.017 |
+|       inst_blk_mem_gen   |     0.017 |
+|   BRAM2                  |     0.017 |
+|     U0                   |     0.017 |
+|       inst_blk_mem_gen   |     0.017 |
+|   a                      |     0.323 |
+|     loop[1].er           |     0.009 |
+|       s                  |     0.009 |
+|     loop[2].er           |     0.027 |
+|       s                  |     0.027 |
+|     loop[3].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[4].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[5].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[6].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[7].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[8].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[9].er           |     0.026 |
+|       s                  |     0.026 |
+|     sb                   |     0.017 |
+|       sub_Bytes[0].s     |     0.001 |
+|       sub_Bytes[24].s    |     0.001 |
+|       sub_Bytes[32].s    |     0.001 |
+|       sub_Bytes[40].s    |     0.001 |
+|       sub_Bytes[48].s    |     0.001 |
+|       sub_Bytes[56].s    |     0.001 |
 |       sub_Bytes[80].s    |     0.001 |
-|   ila                    |     0.122 |
-|     inst                 |     0.122 |
-|       ila_core_inst      |     0.122 |
-|   vio0                   |     0.001 |
-|     inst                 |     0.001 |
+|       sub_Bytes[88].s    |     0.001 |
+|       sub_Bytes[8].s     |     0.001 |
+|   b                      |     0.322 |
+|     loop[1].er           |     0.008 |
+|       s                  |     0.008 |
+|     loop[2].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[3].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[4].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[5].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[6].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[7].er           |     0.025 |
+|       s                  |     0.025 |
+|     loop[8].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[9].er           |     0.026 |
+|       s                  |     0.026 |
+|     sb                   |     0.017 |
+|       sub_Bytes[0].s     |     0.001 |
+|       sub_Bytes[104].s   |     0.001 |
+|       sub_Bytes[120].s   |     0.001 |
+|       sub_Bytes[16].s    |     0.001 |
+|       sub_Bytes[24].s    |     0.001 |
+|       sub_Bytes[32].s    |     0.001 |
+|       sub_Bytes[40].s    |     0.001 |
+|       sub_Bytes[48].s    |     0.001 |
+|       sub_Bytes[56].s    |     0.001 |
+|       sub_Bytes[72].s    |     0.001 |
+|       sub_Bytes[80].s    |     0.001 |
+|       sub_Bytes[88].s    |     0.001 |
+|       sub_Bytes[8].s     |     0.001 |
+|   c                      |     0.272 |
+|     loop[2].er           |     0.002 |
+|       s                  |     0.002 |
+|     loop[3].er           |     0.022 |
+|       s                  |     0.022 |
+|     loop[4].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[5].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[6].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[7].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[8].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[9].er           |     0.026 |
+|       s                  |     0.026 |
+|     sb                   |     0.016 |
+|       sub_Bytes[0].s     |     0.001 |
+|       sub_Bytes[104].s   |     0.001 |
+|       sub_Bytes[120].s   |     0.001 |
+|       sub_Bytes[16].s    |     0.001 |
+|       sub_Bytes[24].s    |     0.001 |
+|       sub_Bytes[32].s    |     0.001 |
+|       sub_Bytes[48].s    |     0.001 |
+|       sub_Bytes[56].s    |     0.001 |
+|   d                      |     0.273 |
+|     loop[2].er           |     0.002 |
+|       s                  |     0.002 |
+|     loop[3].er           |     0.022 |
+|       s                  |     0.022 |
+|     loop[4].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[5].er           |     0.025 |
+|       s                  |     0.025 |
+|     loop[6].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[7].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[8].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[9].er           |     0.026 |
+|       s                  |     0.026 |
+|     sb                   |     0.017 |
+|       sub_Bytes[0].s     |     0.001 |
+|       sub_Bytes[104].s   |     0.001 |
+|       sub_Bytes[16].s    |     0.001 |
+|       sub_Bytes[24].s    |     0.001 |
+|       sub_Bytes[32].s    |     0.001 |
+|       sub_Bytes[40].s    |     0.001 |
+|       sub_Bytes[48].s    |     0.001 |
+|       sub_Bytes[56].s    |     0.001 |
+|       sub_Bytes[64].s    |     0.001 |
+|       sub_Bytes[72].s    |     0.001 |
+|       sub_Bytes[80].s    |     0.001 |
+|       sub_Bytes[88].s    |     0.001 |
+|       sub_Bytes[8].s     |     0.001 |
+|       sub_Bytes[96].s    |     0.001 |
+|   dbg_hub                |     0.004 |
+|     inst                 |     0.004 |
+|       BSCANID.u_xsdbm_id |     0.004 |
+|   e                      |     0.271 |
+|     loop[2].er           |     0.002 |
+|       s                  |     0.002 |
+|     loop[3].er           |     0.023 |
+|       s                  |     0.023 |
+|     loop[4].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[5].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[6].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[7].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[8].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[9].er           |     0.026 |
+|       s                  |     0.026 |
+|     sb                   |     0.017 |
+|       sub_Bytes[0].s     |     0.001 |
+|       sub_Bytes[112].s   |     0.001 |
+|       sub_Bytes[120].s   |     0.001 |
+|       sub_Bytes[16].s    |     0.001 |
+|       sub_Bytes[24].s    |     0.001 |
+|       sub_Bytes[32].s    |     0.001 |
+|       sub_Bytes[40].s    |     0.001 |
+|       sub_Bytes[48].s    |     0.001 |
+|       sub_Bytes[56].s    |     0.001 |
+|       sub_Bytes[64].s    |     0.001 |
+|       sub_Bytes[72].s    |     0.001 |
+|       sub_Bytes[80].s    |     0.001 |
+|       sub_Bytes[88].s    |     0.001 |
+|       sub_Bytes[8].s     |     0.001 |
+|       sub_Bytes[96].s    |     0.001 |
+|   f                      |     0.272 |
+|     loop[2].er           |     0.002 |
+|       s                  |     0.002 |
+|     loop[3].er           |     0.022 |
+|       s                  |     0.022 |
+|     loop[4].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[5].er           |     0.025 |
+|       s                  |     0.025 |
+|     loop[6].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[7].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[8].er           |     0.026 |
+|       s                  |     0.026 |
+|     loop[9].er           |     0.027 |
+|       s                  |     0.027 |
+|     sb                   |     0.017 |
+|       sub_Bytes[0].s     |     0.001 |
+|       sub_Bytes[104].s   |     0.001 |
+|       sub_Bytes[112].s   |     0.001 |
+|       sub_Bytes[120].s   |     0.002 |
+|       sub_Bytes[24].s    |     0.001 |
+|       sub_Bytes[40].s    |     0.001 |
+|       sub_Bytes[48].s    |     0.001 |
+|       sub_Bytes[56].s    |     0.001 |
+|       sub_Bytes[80].s    |     0.001 |
+|       sub_Bytes[88].s    |     0.001 |
+|       sub_Bytes[96].s    |     0.001 |
+|   ila                    |     0.153 |
+|     inst                 |     0.153 |
+|       ila_core_inst      |     0.153 |
+|   vio0                   |     0.002 |
+|     inst                 |     0.002 |
 |       U_XSDB_SLAVE       |     0.001 |
 +--------------------------+-----------+
 

@@ -1,10 +1,11 @@
 set_property PACKAGE_PIN Y9 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
 
-create_clock -period 10.675 -name clk -waveform {0.000 5.338} [get_ports clk]
-set_false_path -from [get_clocks clk] -to [get_clocks dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK]
+create_clock -period 8.375 -name clk -waveform {0.000 4.188} [get_ports clk]
+
+
+
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
 connect_debug_port dbg_hub/clk [get_nets clk_IBUF_BUFG]
-

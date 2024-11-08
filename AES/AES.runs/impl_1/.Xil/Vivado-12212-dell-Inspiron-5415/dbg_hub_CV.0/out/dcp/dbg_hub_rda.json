@@ -1,0 +1,30 @@
+{
+    "Report Information": {
+        "Copyright": "Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.",
+        "Tool Version": "Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023",
+        "Date": "Tue Oct 29 14:38:29 2024",
+        "Host": "dell-Inspiron-5415 running 64-bit Ubuntu 22.04.4 LTS",
+        "Command": "report_design_analysis -qor_summary -disable_device_warning -json /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/.Xil/Vivado-4212-dell-Inspiron-5415/dc_drv.0/dc/prj_ip.runs/dbg_hub_synth_1/.Xil/Vivado-4440-dell-Inspiron-5415/dcp0/dbg_hub_rda.json",
+        "Design": "dbg_hub",
+        "Device": "xc7z020",
+        "Design State": "Synthesized"
+    },
+    "Design QoR Summary": [{
+            "Task Name": "synth_design",
+            "Options": "-incremental_mode off",
+            "Directives": "",
+            "Runtime(mins)": "0",
+            "Wns(ns)": "",
+            "Tns(ns)": "",
+            "Whs(ns)": "",
+            "Ths(ns)": "",
+            "RQA": "",
+            "Global Cong Level N-E-S-W": "",
+            "Global Cong Tile% N-E-S-W": "",
+            "Long Cong Level N-E-S-W": "",
+            "Long Cong Tile% N-E-S-W": "",
+            "Short Cong Level N-E-S-W": "",
+            "Short Cong Tile% N-E-S-W": "",
+            "Number of threads": "4"
+        }]
+}

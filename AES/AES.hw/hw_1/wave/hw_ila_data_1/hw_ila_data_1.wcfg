@@ -9,15 +9,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="8"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomStartTime time="510"></ZoomStartTime>
+      <ZoomEndTime time="528"></ZoomEndTime>
+      <Cursor1Time time="513"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="176"></NameColumnWidth>
-      <ValueColumnWidth column_width="251"></ValueColumnWidth>
+      <NameColumnWidth column_width="153"></NameColumnWidth>
+      <ValueColumnWidth column_width="201"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="15" />
+   <wave_markers>
+      <marker label="" time="525" />
+      <marker label="" time="515" />
+   </wave_markers>
    <wvobject type="array" fp_name="addra[0]">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">addra[0][6:0]</obj_property>

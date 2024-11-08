@@ -3,16 +3,16 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Nov  7 16:01:55 2024
-# Process ID: 67881
+# Start of session at: Fri Nov  8 11:28:05 2024
+# Process ID: 11814
 # Current directory: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1
 # Command line: vivado -log AES.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AES.tcl
 # Log file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/AES.vds
 # Journal file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/vivado.jou
-# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 1488.231 MHz, CPU Physical cores: 12, Host memory: 7635 MB
+# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 4042.611 MHz, CPU Physical cores: 12, Host memory: 7635 MB
 #-----------------------------------------------------------
 source AES.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1337.312 ; gain = 0.023 ; free physical = 1679 ; free virtual = 4325
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1290.266 ; gain = 19.023 ; free physical = 171 ; free virtual = 2517
 Command: read_checkpoint -auto_incremental -incremental /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/utils_1/imports/synth_1/AES.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/utils_1/imports/synth_1/AES.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,22 +25,22 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 67937
+INFO: [Synth 8-7075] Helper process launched with PID 11851
 INFO: [Synth 8-11241] undeclared symbol 'dina', assumed default net type 'wire' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:27]
 INFO: [Synth 8-11241] undeclared symbol 'dinb', assumed default net type 'wire' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:33]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2077.598 ; gain = 377.770 ; free physical = 670 ; free virtual = 3319
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2076.176 ; gain = 378.699 ; free physical = 139 ; free virtual = 1534
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'AES' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:1]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/blk_mem_gen_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/blk_mem_gen_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_2' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/blk_mem_gen_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_2' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/blk_mem_gen_2_stub.v:6]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:67]
-INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/ila_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/ila_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'keyExpansion' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/helper.v:11]
 INFO: [Synth 8-6155] done synthesizing module 'keyExpansion' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/helper.v:11]
 INFO: [Synth 8-6157] synthesizing module 'AES_Encrypt' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES_Encryption.v:1]
@@ -57,8 +57,8 @@ INFO: [Synth 8-6157] synthesizing module 'addRoundKey' [/home/dell/Desktop/FPGA/
 INFO: [Synth 8-6155] done synthesizing module 'addRoundKey' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/helper.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'encryptRound' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/encryptHelper.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'AES_Encrypt' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES_Encryption.v:1]
-INFO: [Synth 8-6157] synthesizing module 'vio_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/vio_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'vio_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-67881-dell-Inspiron-5415/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/.Xil/Vivado-11814-dell-Inspiron-5415/realtime/vio_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'AES' (0#1) [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:1]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio0'. This will prevent further optimization [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:102]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila'. This will prevent further optimization [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:67]
@@ -74,18 +74,18 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 WARNING: [Synth 8-3848] Net dina in module/entity AES does not have driver. [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:27]
 WARNING: [Synth 8-3848] Net dinb in module/entity AES does not have driver. [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES.v:33]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2197.535 ; gain = 497.707 ; free physical = 509 ; free virtual = 3163
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2198.113 ; gain = 500.637 ; free physical = 127 ; free virtual = 1401
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2212.379 ; gain = 512.551 ; free physical = 509 ; free virtual = 3163
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2209.988 ; gain = 512.512 ; free physical = 126 ; free virtual = 1400
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2212.379 ; gain = 512.551 ; free physical = 509 ; free virtual = 3163
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2209.988 ; gain = 512.512 ; free physical = 126 ; free virtual = 1400
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2212.379 ; gain = 0.000 ; free physical = 511 ; free virtual = 3160
+Netlist sorting complete. Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2209.988 ; gain = 0.000 ; free physical = 125 ; free virtual = 1401
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -101,33 +101,32 @@ Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/A
 Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio0'
 Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio0'
 Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc]
-WARNING: [Vivado 12-627] No clocks matched 'dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK'. [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc:5]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc:5]
 Finished Parsing XDC File [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/AES_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/constrs_1/imports/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AES_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/AES_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2379.129 ; gain = 0.000 ; free physical = 469 ; free virtual = 3124
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2377.738 ; gain = 0.000 ; free physical = 151 ; free virtual = 1367
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2379.129 ; gain = 0.000 ; free physical = 469 ; free virtual = 3123
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BRAM0' at clock pin 'clka' is different from the actual clock period '10.675', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BRAM1' at clock pin 'clka' is different from the actual clock period '10.675', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BRAM2' at clock pin 'clka' is different from the actual clock period '10.675', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2377.738 ; gain = 0.000 ; free physical = 152 ; free virtual = 1368
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BRAM0' at clock pin 'clka' is different from the actual clock period '8.375', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BRAM1' at clock pin 'clka' is different from the actual clock period '8.375', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BRAM2' at clock pin 'clka' is different from the actual clock period '8.375', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ila' at clock pin 'clk' is different from the actual clock period '8.375', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'vio0' at clock pin 'clk' is different from the actual clock period '8.375', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 473 ; free virtual = 3128
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 125 ; free virtual = 1353
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 473 ; free virtual = 3127
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 125 ; free virtual = 1353
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -138,10 +137,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for BRAM2. (constraint file  auto gen
 Applied set_property KEEP_HIERARCHY = SOFT for ila. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for vio0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 473 ; free virtual = 3127
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 125 ; free virtual = 1353
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 469 ; free virtual = 3130
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 236 ; free virtual = 1365
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -181,7 +180,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:05 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 473 ; free virtual = 3167
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:07 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 162 ; free virtual = 1335
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -259,8 +258,8 @@ ROM: Preliminary Mapping Report
 |encryptRound | s/sub_Bytes[64].s/c  | 256x8         | LUT            | 
 |encryptRound | s/sub_Bytes[72].s/c  | 256x8         | LUT            | 
 |encryptRound | s/sub_Bytes[80].s/c  | 256x8         | LUT            | 
-|encryptRound | s/sub_Bytes[112].s/c | 256x8         | LUT            | 
-|encryptRound | s/sub_Bytes[120].s/c | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[88].s/c  | 256x8         | LUT            | 
+|encryptRound | s/sub_Bytes[96].s/c  | 256x8         | LUT            | 
 |encryptRound | s/sub_Bytes[0].s/c   | 256x8         | LUT            | 
 |encryptRound | s/sub_Bytes[8].s/c   | 256x8         | LUT            | 
 |encryptRound | s/sub_Bytes[16].s/c  | 256x8         | LUT            | 
@@ -437,19 +436,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:09 ; elapsed = 00:02:10 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 474 ; free virtual = 3166
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:11 ; elapsed = 00:02:12 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 155 ; free virtual = 1339
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:14 ; elapsed = 00:02:15 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 382 ; free virtual = 3080
+Finished Timing Optimization : Time (s): cpu = 00:02:16 ; elapsed = 00:02:17 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 207 ; free virtual = 1290
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:22 ; elapsed = 00:02:23 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 354 ; free virtual = 3052
+Finished Technology Mapping : Time (s): cpu = 00:02:24 ; elapsed = 00:02:25 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 181 ; free virtual = 1289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -568,37 +567,37 @@ WARNING: [Synth 8-3295] tying undriven pin douta1_inferred:in0[29] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin douta1_inferred:in0[28] to constant 0
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:28 ; elapsed = 00:02:28 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 340 ; free virtual = 3053
+Finished IO Insertion : Time (s): cpu = 00:02:30 ; elapsed = 00:02:31 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 256 ; free virtual = 1311
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:28 ; elapsed = 00:02:29 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 339 ; free virtual = 3052
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:30 ; elapsed = 00:02:31 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 257 ; free virtual = 1315
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:34 ; elapsed = 00:02:34 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 342 ; free virtual = 3055
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:36 ; elapsed = 00:02:37 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 243 ; free virtual = 1305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:34 ; elapsed = 00:02:35 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 341 ; free virtual = 3054
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:36 ; elapsed = 00:02:37 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 243 ; free virtual = 1305
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:34 ; elapsed = 00:02:35 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 342 ; free virtual = 3055
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:36 ; elapsed = 00:02:38 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 246 ; free virtual = 1306
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:34 ; elapsed = 00:02:35 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 342 ; free virtual = 3055
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:36 ; elapsed = 00:02:38 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 241 ; free virtual = 1309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -636,30 +635,28 @@ Report Cell Usage:
 |17    |IBUF        |     1|
 +------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:35 ; elapsed = 00:02:35 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 341 ; free virtual = 3055
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:37 ; elapsed = 00:02:38 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 232 ; free virtual = 1308
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 257 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:27 ; elapsed = 00:02:30 . Memory (MB): peak = 2389.035 ; gain = 512.551 ; free physical = 341 ; free virtual = 3055
-Synthesis Optimization Complete : Time (s): cpu = 00:02:35 ; elapsed = 00:02:35 . Memory (MB): peak = 2389.035 ; gain = 689.207 ; free physical = 341 ; free virtual = 3055
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:30 ; elapsed = 00:02:32 . Memory (MB): peak = 2388.645 ; gain = 512.512 ; free physical = 228 ; free virtual = 1307
+Synthesis Optimization Complete : Time (s): cpu = 00:02:37 ; elapsed = 00:02:38 . Memory (MB): peak = 2388.645 ; gain = 691.168 ; free physical = 228 ; free virtual = 1307
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2389.035 ; gain = 0.000 ; free physical = 627 ; free virtual = 3338
+Netlist sorting complete. Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2388.645 ; gain = 0.000 ; free physical = 563 ; free virtual = 1878
 INFO: [Netlist 29-17] Analyzing 23040 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2411.520 ; gain = 0.000 ; free physical = 602 ; free virtual = 3299
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2411.160 ; gain = 0.000 ; free physical = 517 ; free virtual = 1841
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: e516ada0
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+63 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:50 ; elapsed = 00:02:49 . Memory (MB): peak = 2411.520 ; gain = 1058.191 ; free physical = 601 ; free virtual = 3298
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2096.154; main = 1836.379; forked = 400.177
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3336.984; main = 2411.523; forked = 979.961
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+synth_design: Time (s): cpu = 00:02:53 ; elapsed = 00:02:53 . Memory (MB): peak = 2411.160 ; gain = 1060.184 ; free physical = 517 ; free virtual = 1841
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2028.897; main = 1759.089; forked = 412.734
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3336.551; main = 2411.164; forked = 979.918
 INFO: [Common 17-1381] The checkpoint '/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/synth_1/AES.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file AES_utilization_synth.rpt -pb AES_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 16:05:01 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  8 11:31:16 2024...
