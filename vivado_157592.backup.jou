@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri Nov  8 18:03:51 2024
+# Process ID: 157592
+# Current directory: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project
+# Command line: vivado
+# Log file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/vivado.log
+# Journal file: /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/vivado.jou
+# Running On: dell-Inspiron-5415, OS: Linux, CPU Frequency: 2035.050 MHz, CPU Physical cores: 12, Host memory: 7635 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/dell/Desktop/FPGA/VivadoProjects/FPGA_project/AES/AES.runs/impl_1/AES.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"ila"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"ila"}]
+set_property OUTPUT_VALUE 1 [get_hw_probes reset -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"vio0"}]]
+commit_hw_vio [get_hw_probes {reset} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"vio0"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes reset -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"vio0"}]]
+commit_hw_vio [get_hw_probes {reset} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"vio0"}]]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"ila"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"ila"}]]

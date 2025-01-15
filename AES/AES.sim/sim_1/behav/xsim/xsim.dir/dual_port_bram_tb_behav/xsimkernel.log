@@ -1,0 +1,4 @@
+Running: xsim.dir/dual_port_bram_tb_behav/xsimk -simmode gui -wdb dual_port_bram_tb_behav.wdb -simrunnum 0 -socket 47019
+Design successfully loaded
+Design Loading Memory Usage: 23492 KB (Peak: 24088 KB)
+Design Loading CPU Usage: 60 ms
