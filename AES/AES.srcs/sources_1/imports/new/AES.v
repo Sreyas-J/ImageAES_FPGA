@@ -1,12 +1,10 @@
-module AES(clk);
-input clk;
-
+module AES(input clk, output wire[127:0] encrypted128);
 wire [127:0] in;
 reg ena;
 reg wea,done;
 reg [8:0] addra;
 wire reset;
-wire[127:0] encrypted128;
+//wire[127:0] encrypted128;
 wire [(128*11)-1:0] fullkeys;
 wire [127:0] douta1,douta2,douta3,doutb1,doutb2,doutb3;
 

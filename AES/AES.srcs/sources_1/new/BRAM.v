@@ -22,8 +22,7 @@ module ram#(
 
     // Initialize RAM with the contents of the binary file
     initial begin
-        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", ram_block);
-        
+        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", ram_block);  
     end
 
 endmodule

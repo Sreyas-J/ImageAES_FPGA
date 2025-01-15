@@ -2,3 +2,6 @@ Running: xsim.dir/ram_tb_func_impl/xsimk -simmode gui -wdb ram_tb_func_impl.wdb 
 Design successfully loaded
 Design Loading Memory Usage: 23492 KB (Peak: 24084 KB)
 Design Loading CPU Usage: 80 ms
+Simulation completed
+Simulation Memory Usage: 105228 KB (Peak: 162760 KB)
+Simulation CPU Usage: 6900 ms
