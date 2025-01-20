@@ -3,6 +3,7 @@ module AES_Encrypt(
     input [127:0] in,
     input [(128*11)-1:0] fullkeys,
     output wire [127:0] out
+//    output wire [(128*11)-1:0] states_out
 );
 
     reg [127:0] states [11:0];
@@ -32,7 +33,14 @@ module AES_Encrypt(
         for (j = 9; j >= 0; j = j - 1) begin
             states[j] <= encryptOut[j];
         end
+        
     end
+    
+//    generate
+//        for (i = 0; i < 11; i = i + 1) begin : flatten_states
+//            assign states_out[(i*128)+:128] = states[i];
+//        end
+//    endgenerate
 
     // Final Round Logic - instantiated outside of always block
     subBytes sb (states[9], afterSubBytes);

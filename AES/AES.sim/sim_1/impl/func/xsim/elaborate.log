@@ -1,16 +1,9 @@
 Vivado Simulator v2023.1
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot ram_tb_func_impl xil_defaultlib.ram_tb xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot AES_tb_func_impl xil_defaultlib.AES_tb xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 129 for port 'data_in' [/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sim_1/new/BRAM_tb.v:11]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram
-Compiling module xil_defaultlib.ram_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot ram_tb_func_impl
+ERROR: [VRFC 10-3180] cannot find port 'encrypted128' on this module [/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sim_1/new/AES_tb.v:12]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
