@@ -1,4 +1,4 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.sim/sim_1/impl/func/xsim/ram_tb_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.sim/sim_1/impl/func/xsim/AES_tb_func_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module clk_x_pntrs
 INFO: [VRFC 10-311] analyzing module clk_x_pntrs_8
 INFO: [VRFC 10-311] analyzing module dbg_hub
@@ -1723,7 +1723,5 @@ INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_6_synth_285
 INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_6_synth_318
 INFO: [VRFC 10-311] analyzing module ila_0_blk_mem_gen_v8_4_6_synth__parameterized0
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/new/BRAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sim_1/new/BRAM_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ram_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sim_1/new/AES_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES_tb
