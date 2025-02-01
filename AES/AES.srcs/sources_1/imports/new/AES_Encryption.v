@@ -35,12 +35,12 @@ module AES_Encrypt(
             
             cntr<=cntr+1;
         end
-        else if(cntr==6'd40) begin
+        else if(cntr==6'd41) begin
             done<=1'b1;
             out<=addrkOut;
             
+            addrkIn<=pipR;
             pipR<=rOut;
-            addrkIn<=mOut;
             rIn<=sOut;
             
             cntr<=cntr+1;
@@ -49,9 +49,8 @@ module AES_Encrypt(
             done<=1'b1;
             
             out<=addrkOut;
-            addrkIn<=rOut;
-            rIn<=sOut;
-            
+            addrkIn<=pipR;
+                        
             cntr<=cntr+1;
         end
         else if(cntr==6'd43) begin
@@ -89,16 +88,18 @@ module AES_Encrypt(
                 sIn<=addrkOut;
             end
             else if(cntr==6'd39) begin
-                key<=fullkeys[(((128*11)-1)-128*10)-:128];
-                addrkIn<=rOut;
-                
-                rIn<=sOut;                
+//                key<=fullkeys[(((128*11)-1)-128*10)-:128];
+                pipR<=rOut;
+                rIn<=sOut;
                 sIn<=addrkOut;
+                addrkIn<=mOut;
             end
             
-            else if(cntr==6'd41) begin
-                addrkIn<=pipR;
+            else if(cntr==6'd40) begin
+                pipR<=rOut;
+                rIn<=sOut;
                 sIn<=addrkOut;
+                addrkIn<=pipR;
             end
             
             else begin
@@ -110,10 +111,10 @@ module AES_Encrypt(
                 sIn<=addrkOut;
             end
            
-          if(cntr%3'd4==2'd1) key<=fullkeys[(((128*11)-1)-128*((cntr-1)/3'd4))-:128];
-          else if(cntr%3'd4==2'd2) key<=fullkeys[(((128*11)-1)-128*((cntr-2)/3'd4))-:128];
-          else if(cntr%3'd4==2'd3) key<=fullkeys[(((128*11)-1)-128*((cntr+1)/3'd4))-:128];
-          else if(cntr%3'd4==2'd0)  key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];
+//          if(cntr%3'd4==2'd1) key<=fullkeys[(((128*11)-1)-128*((cntr-1)/3'd4))-:128];//
+//          else if(cntr%3'd4==2'd2) key<=fullkeys[(((128*11)-1)-128*((cntr-2)/3'd4))-:128];//
+//          else if(cntr%3'd4==2'd3) key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];//
+          if(cntr%3'd4==2'd0)  key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];
 
                        
             cntr<=cntr+1;
