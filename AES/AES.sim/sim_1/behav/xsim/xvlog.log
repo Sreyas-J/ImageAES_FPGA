@@ -2,6 +2,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPG
 INFO: [VRFC 10-311] analyzing module AES
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES_Encryption.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AES_Encrypt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/new/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/encryptHelper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module encryptRound
 INFO: [VRFC 10-311] analyzing module mixColumns

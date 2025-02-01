@@ -2,6 +2,7 @@
 verilog xil_defaultlib  \
 "../../../../AES.srcs/sources_1/imports/new/AES.v" \
 "../../../../AES.srcs/sources_1/imports/new/AES_Encryption.v" \
+"../../../../AES.srcs/sources_1/new/BRAM.v" \
 "../../../../AES.srcs/sources_1/imports/new/encryptHelper.v" \
 "../../../../AES.srcs/sources_1/imports/new/helper.v" \
 "../../../../AES.srcs/sources_1/imports/new/sbox.v" \
