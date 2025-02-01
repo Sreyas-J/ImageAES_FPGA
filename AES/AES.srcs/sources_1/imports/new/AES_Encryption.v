@@ -4,7 +4,8 @@ module AES_Encrypt(
     input [127:0] in,
     input [(128*11)-1:0] fullkeys,
     output reg [127:0] out,
-    output reg done
+    output reg complete,
+    output reg [5:0] cntr
 );
 
     reg [127:0] addrkIn;
@@ -18,109 +19,96 @@ module AES_Encrypt(
     wire [127:0] mOut;
     
     reg [127:0] pipR;    
-    reg [5:0] cntr;
+//    reg [5:0] cntr;
     reg [127:0] key;
 
+    
     addRoundKey addrk1 (addrkIn, addrkOut, key);
     subBytes s(sIn,sOut);
     shiftRows r(rIn,rOut);
     mixColumns m(mIn,mOut);
     
     always@(posedge clk) begin
-        if(rst) cntr<=4'd0;
-        else if(cntr==6'd44) begin
-            done<=1'b1;
-            
-            out<=addrkOut;
-            
-            cntr<=cntr+1;
+        if(rst) begin
+            cntr<=4'd0;
+            complete<=1'b0;  
         end
-        else if(cntr==6'd41) begin
-            done<=1'b1;
-            out<=addrkOut;
-            
-            addrkIn<=pipR;
-            pipR<=rOut;
-            rIn<=sOut;
-            
-            cntr<=cntr+1;
-        end
-        else if(cntr==6'd42) begin
-            done<=1'b1;
-            
-            out<=addrkOut;
-            addrkIn<=pipR;
-                        
-            cntr<=cntr+1;
-        end
-        else if(cntr==6'd43) begin
-            done<=1'b1;
-            
-            out<=addrkOut;
-            addrkIn<=rOut;
-            
-            cntr<=cntr+1;
-        end
-        else begin
-            done<=1'b0;
-         
-            if(cntr==6'd0)begin
-//                key<=fullkeys[(((128*11)-1))-:128];
-                addrkIn<=in;
-            end
-            
-            else if(cntr==6'd1) begin
-                addrkIn<=in;
+        else if(cntr==6'd45) begin     
+                out<=addrkOut;
                 
+//                complete<=1'b0;
+                cntr<=1;
+            end
+        else begin         
+            if(cntr==6'd1)begin
+                addrkIn<=in;
+                complete<=1'b0;
+            end     
+            else if(cntr==6'd2) begin
+                addrkIn<=in;             
                 sIn<=addrkOut;
             end
-            else if(cntr==6'd2) begin
+            else if(cntr==6'd3) begin
                 addrkIn<=in;
                 
                 rIn<=sOut;
                 sIn<=addrkOut;
             end
-            else if(cntr==6'd3) begin
+            else if(cntr==6'd4) begin
                 addrkIn<=in;
                 
                 mIn<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
             end
-            else if(cntr==6'd39) begin
-//                key<=fullkeys[(((128*11)-1)-128*10)-:128];
+            else if(cntr==6'd40) begin
                 pipR<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
                 addrkIn<=mOut;
             end
             
-            else if(cntr==6'd40) begin
+            else if(cntr==6'd41) begin
                 pipR<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
                 addrkIn<=pipR;
             end
-            
-            else begin
-//                key<=fullkeys[(((128*11)-1)-128*((cntr+1)/3'd4))-:128];
-                             
+            else if(cntr==6'd42) begin
+                out<=addrkOut;
+                
+                addrkIn<=pipR;
+                pipR<=rOut;
+                rIn<=sOut;                
+            end
+            else if(cntr==6'd43) begin
+                
+                out<=addrkOut;
+                addrkIn<=pipR;
+                complete<=1'b1;
+                            
+            end
+            else if(cntr==6'd44) begin
+                
+                out<=addrkOut;
+                addrkIn<=rOut;
+                
+                complete<=1'b0;
+            end
+            else begin                             
                 addrkIn<=mOut;
                 mIn<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
             end
            
-//          if(cntr%3'd4==2'd1) key<=fullkeys[(((128*11)-1)-128*((cntr-1)/3'd4))-:128];//
-//          else if(cntr%3'd4==2'd2) key<=fullkeys[(((128*11)-1)-128*((cntr-2)/3'd4))-:128];//
-//          else if(cntr%3'd4==2'd3) key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];//
-          if(cntr%3'd4==2'd0)  key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];
-
+            if(cntr%3'd4==2'd1)  key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];
                        
             cntr<=cntr+1;
         end
         
-        $display("key:%h cntr:%d done:%d in:%h addrkIn:%h addrkOut:%h sIn:%h sOut:%h rIn:%h rOut:%h mixColIn:%h mixColOut:%h", key, cntr, done,in, addrkIn, addrkOut, sIn, sOut, rIn, rOut, mIn, mOut);
+        
+        $display("key:%h cntr:%d done:%d in:%h addrkIn:%h addrkOut:%h sIn:%h sOut:%h rIn:%h rOut:%h mixColIn:%h mixColOut:%h", key, cntr, complete,in, addrkIn, addrkOut, sIn, sOut, rIn, rOut, mIn, mOut);
     end
 
 endmodule
