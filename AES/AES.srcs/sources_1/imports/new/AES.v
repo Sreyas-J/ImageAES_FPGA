@@ -35,9 +35,9 @@ always@(posedge clk) begin
         end
         else if(addra%4!=3) addra<=addra+1;
         else if(done) addra<=addra+1;
-    end        
-
-//    $display("cmplt:%b addr:%h in:%h cntr:%d",complete,addra,in,cntr);
+        
+    end
+    $display("cmplt:%b addr:%h in:%h cntr:%d",complete,addra,in,cntr);
 end
 
 endmodule

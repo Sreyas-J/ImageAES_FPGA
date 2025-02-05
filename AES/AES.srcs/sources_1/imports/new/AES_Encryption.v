@@ -33,62 +33,62 @@ module AES_Encrypt(
             cntr<=4'd0;
             complete<=1'b0;  
         end
-        else if(cntr==6'd45) begin     
+        else if(cntr==6'd46) begin     
                 out<=addrkOut;
                 
 //                complete<=1'b0;
-                cntr<=1;
+                cntr<=2;
             end
         else begin         
-            if(cntr==6'd1)begin
+            if(cntr==6'd2)begin
                 addrkIn<=in;
                 complete<=1'b0;
             end     
-            else if(cntr==6'd2) begin
+            else if(cntr==6'd3) begin
                 addrkIn<=in;             
                 sIn<=addrkOut;
             end
-            else if(cntr==6'd3) begin
+            else if(cntr==6'd4) begin
                 addrkIn<=in;
                 
                 rIn<=sOut;
                 sIn<=addrkOut;
             end
-            else if(cntr==6'd4) begin
+            else if(cntr==6'd5) begin
                 addrkIn<=in;
                 
                 mIn<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
             end
-            else if(cntr==6'd40) begin
+            else if(cntr==6'd41) begin
                 pipR<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
                 addrkIn<=mOut;
             end
             
-            else if(cntr==6'd41) begin
+            else if(cntr==6'd42) begin
                 pipR<=rOut;
                 rIn<=sOut;
                 sIn<=addrkOut;
                 addrkIn<=pipR;
             end
-            else if(cntr==6'd42) begin
+            else if(cntr==6'd43) begin
                 out<=addrkOut;
                 
                 addrkIn<=pipR;
                 pipR<=rOut;
                 rIn<=sOut;                
             end
-            else if(cntr==6'd43) begin
+            else if(cntr==6'd44) begin
                 
                 out<=addrkOut;
                 addrkIn<=pipR;
                 complete<=1'b1;
                             
             end
-            else if(cntr==6'd44) begin
+            else if(cntr==6'd45) begin
                 
                 out<=addrkOut;
                 addrkIn<=rOut;
@@ -102,13 +102,13 @@ module AES_Encrypt(
                 sIn<=addrkOut;
             end
            
-            if(cntr%3'd4==2'd1)  key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];
+            if(cntr%3'd4==2'd2)  key<=fullkeys[(((128*11)-1)-128*((cntr)/3'd4))-:128];
                        
             cntr<=cntr+1;
         end
         
         
-        $display("key:%h cntr:%d done:%d in:%h addrkIn:%h addrkOut:%h sIn:%h sOut:%h rIn:%h rOut:%h mixColIn:%h mixColOut:%h", key, cntr, complete,in, addrkIn, addrkOut, sIn, sOut, rIn, rOut, mIn, mOut);
+//        $display("key:%h cntr:%d done:%d in:%h addrkIn:%h addrkOut:%h sIn:%h sOut:%h rIn:%h rOut:%h mixColIn:%h mixColOut:%h", key, cntr, complete,in, addrkIn, addrkOut, sIn, sOut, rIn, rOut, mIn, mOut);
     end
 
 endmodule
