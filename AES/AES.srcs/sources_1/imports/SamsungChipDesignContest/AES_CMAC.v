@@ -99,12 +99,16 @@ module AES_CMAC#(
                         //     end
                         // end
                         if(cntr==45) begin
+                            in<=cmacIn^cmacReg;
                             messDone<=1'b1;
                         end
                     end
                     else if(messAddra%3==0) begin
-                        in<=cmacIn^cmacReg;
+//                        in<=cmacIn^cmacReg;
+                        
+                        in<=messIn;
                         messAddra<=messAddra+1;
+                        cmacReg<=encrypted;
                         
                         // cmacAddra<=cmacAddra+1; 
                         // init<=1'b0;
@@ -112,13 +116,17 @@ module AES_CMAC#(
 
                     end
                     else if(messAddra%3==1) begin
-                        if(bufFlg==1'b1) bufFlg<=1'b0;
+                        if(bufFlg==1'b1)begin
+                            bufFlg<=1'b0;
+                            in<=messIn;
+                        end
                         else begin 
                             messAddra<=messAddra+1;
+                            in<=cmacIn^cmacReg;
                             bufFlg<=1'b1;
                         end
 
-                        in<=messIn;
+//                        in<=messIn;
                     end
                     else if(messAddra%3==2)begin
                         if(flag) begin
@@ -129,13 +137,13 @@ module AES_CMAC#(
                         in<=messIn;
                     end
             end
-            // else if(cmacDone==1'b0) begin
+//             else if(cmacDone==1'b0) begin
                 
-            //     if(cntr==1) 
-            // end
+//                 if(cntr==1) 
+//             end
         end
         
-        $display("messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h encrypted:%h bufFlg:%d messDone:%b", messAddra,cmacAddra,messIn,cmacIn,in,encrypted,bufFlg,messDone);
+        $display("cntr:%d flg:%b messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b",cntr,flag, messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone);
     end
 
     // Output Final Tag with Synchronization
