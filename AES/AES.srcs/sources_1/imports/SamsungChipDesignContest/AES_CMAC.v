@@ -19,7 +19,8 @@ module AES_CMAC#(
 //    output reg flag,
 //    output wire [5:0] cntr,
 //    output reg [127:0] K1
-    output [127:0] encrypted
+    output [127:0] encrypted,
+    output reg cmacDone
     );
 
     wire [(128*11)-1:0] fullkeys;
@@ -34,7 +35,7 @@ module AES_CMAC#(
     reg done_out, final_tag;
 //    wire [127:0] encrypted;
     reg [127:0] cmacReg;
-    reg [127:0] cmacDone;
+    
     reg messDone;
     reg bufFlg;
     reg [127:0] tag;
@@ -50,6 +51,8 @@ module AES_CMAC#(
     
     wire [5:0] cntr;
     reg [1:0] rem;
+    
+    reg [127:0] tag;
 
     // Key Expansion
     keyExpansion ke (key128, fullkeys);
@@ -78,8 +81,7 @@ module AES_CMAC#(
         else
             begin
                 if(messDone==1'b0) begin
-//                    $display("updating messAddra:%d",messAddra);
-//                    reset<=1'b0;
+
                     if(messAddra>=size) begin
                         // rem=messAddra%4;
                         
@@ -101,6 +103,7 @@ module AES_CMAC#(
                         if(cntr==45) begin
                             in<=cmacIn^cmacReg;
                             messDone<=1'b1;
+                            cmacReg<=encrypted; 
                         end
                     end
                     else if(messAddra%3==0) begin
@@ -109,10 +112,6 @@ module AES_CMAC#(
                         in<=messIn;
                         messAddra<=messAddra+1;
                         cmacReg<=encrypted;
-                        
-                        // cmacAddra<=cmacAddra+1; 
-                        // init<=1'b0;
-                        
 
                     end
                     else if(messAddra%3==1) begin
@@ -137,29 +136,46 @@ module AES_CMAC#(
                         in<=messIn;
                     end
             end
-//             else if(cmacDone==1'b0) begin
+             else if(cmacDone==1'b0) begin
                 
-//                 if(cntr==1) 
-//             end
+                 if(cntr==46) in<=cmacIn^cmacReg;
+                 if(cntr==45) cmacReg<=encrypted;
+                 
+                 if(flag)begin
+                    cmacAddra<=cmacAddra+1;
+//                    in<=128'd0;
+                end
+                
+                 if(cmacAddra==size-1) begin
+                        // rem=messAddra%4;
+                        
+                        // if(rem==3) beginX
+                        //     if(cntr==44)begin
+                        //         messDone<=1'b1;
+                        //     end
+                        // end
+                        // else if(rem==2) begin
+                        //     if(cntr==43)begin
+                        //         messDone<=1'b1;
+                        //     end
+                        // end
+                        // else if(rem==1) begin
+                        //     if(cntr==42)begin
+                        //         messDone<=1'b1;
+                        //     end
+                        // end
+                        if(cntr==46) in<=cmacReg^cmacIn^128'h8d42766f0f1eb704de9f02c54391b075;
+                        if(flag) tag<=encrypted;
+                    end
+                    if(cmacAddra>=size) begin
+                        if(cntr==46) begin
+                            cmacDone<=1'b1;
+                        end
+                    end
+             end
         end
         
-        $display("cntr:%d flg:%b messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b",cntr,flag, messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone);
+        $display("cntr:%d flg:%b messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag, messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
     end
 
-    // Output Final Tag with Synchronization
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            tag <= 128'b0;
-            tag_updated <= 1'b0;
-            final_tag<=1'b0;
-        end else if (cmacDone && !tag_updated) begin
-            tag = X ^ out ^ K1; // Store final computed value
-            tag_updated = 1'b1;
-            xin2=tag;
-             // Prevent re-updating tag
-        end
-        else begin
-            tag=X;
-        end
-    end
 endmodule

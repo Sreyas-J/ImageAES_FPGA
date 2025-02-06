@@ -15,8 +15,8 @@ module AES_tb;
         .clk(clk),              // Connect clock
         .reset(reset),
         .size(size),
-        .encrypted(encrypted128) // Connect encrypted128
-//        .complete(done)
+        .encrypted(encrypted128), // Connect encrypted128
+        .cmacDone(done)
     );
 
     // Clock generation
@@ -38,7 +38,7 @@ module AES_tb;
         reset=0;
 //        #900
 //        in=128'h00010000FFDB00430008060607060508;
-        #100000
+        #1000000
         $finish;
     end
 

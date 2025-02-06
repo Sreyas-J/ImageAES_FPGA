@@ -80,20 +80,21 @@ module AES_Encrypt(
                 addrkIn<=pipR;
                 pipR<=rOut;
                 rIn<=sOut;  
-                complete<=2'd1;              
+                complete<=1'b1;              
 
             end
             else if(cntr==6'd44) begin
                 
                 out<=addrkOut;
                 addrkIn<=pipR;
+                complete<=1'b0;
                           
             end
             else if(cntr==6'd45) begin
                 
                 out<=addrkOut;
                 addrkIn<=rOut;
-                complete<=2'd0;
+                
                 
             end
             else begin                             
