@@ -45,7 +45,7 @@ module AES_CMAC#(
     
     reg [127:0] xin2;
     wire [127:0] out;
-    wire [127:0] L;
+    reg [127:0] L;
     reg [127:0] K1;
     wire flag;
     
@@ -137,13 +137,19 @@ module AES_CMAC#(
                     end
             end
              else if(cmacDone==1'b0) begin
-                
-                 if(cntr==46) in<=cmacIn^cmacReg;
-                 if(cntr==45) cmacReg<=encrypted;
+                if(cntr==2)  in<=128'd0;
+
+                 if(cntr==45)begin
+                    cmacReg<=encrypted;
+                end
                  
-                 if(flag)begin
-                    cmacAddra<=cmacAddra+1;
-//                    in<=128'd0;
+                 if(cntr==43)begin
+                    cmacAddra<=cmacAddra+1;   
+          
+                end
+                if(flag) in<=cmacIn^cmacReg;
+                if(cntr==46)begin
+                    L<=encrypted;
                 end
                 
                  if(cmacAddra==size-1) begin
@@ -164,18 +170,19 @@ module AES_CMAC#(
                         //         messDone<=1'b1;
                         //     end
                         // end
-                        if(cntr==46) in<=cmacReg^cmacIn^128'h8d42766f0f1eb704de9f02c54391b075;
+                        if(cntr==46) in<=cmacReg^cmacIn^K1;
                         if(flag) tag<=encrypted;
+                  end
+                if(cmacAddra>=size) begin
+                    if(cntr==46) begin
+                        cmacDone<=1'b1;
                     end
-                    if(cmacAddra>=size) begin
-                        if(cntr==46) begin
-                            cmacDone<=1'b1;
-                        end
-                    end
+                end
+
              end
         end
         
-        $display("cntr:%d flg:%b messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag, messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+        $display("cntr:%d flg:%b messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h L:%h",cntr,flag, messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag,L);
     end
 
 endmodule
