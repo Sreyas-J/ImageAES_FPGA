@@ -4,7 +4,7 @@ module AES_tb;
 
     // Testbench variables
     reg clk;
-    reg [8:0] size;
+    reg [15:0] size;
     reg reset;
     wire [127:0] encrypted128;
     wire done;
@@ -14,7 +14,7 @@ module AES_tb;
     AES_CMAC dut (
         .clk(clk),              // Connect clock
         .reset(reset),
-        .size(size),
+        .len(size),
         .encrypted(encrypted128), // Connect encrypted128
         .cmacDone(done)
     );
@@ -29,9 +29,10 @@ module AES_tb;
         $dumpfile("simulation.vcd");
         // Dump all variables from the testbench and instantiated modules
         $dumpvars(0, AES_tb);
-    
+        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", dut.BRAM1.ram);
+
         clk = 0;
-        size=9'd267;
+        size=16'd34176;
 //        in=128'hFFD8FFE000104A464946000101000001;
         reset=1;
         #20

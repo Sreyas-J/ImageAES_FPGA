@@ -6,7 +6,7 @@ module AES_CMAC#(
 (   
     input clk,
     input reset,
-    input wire [8:0] size,
+    input wire [15:0] len,
     output [127:0] encrypted,
     output reg cmacDone
     );
@@ -36,6 +36,7 @@ module AES_CMAC#(
     reg [127:0] L;
     reg [127:0] K1;
     wire flag;
+    reg [8:0] size;
     
     wire [5:0] cntr;
     reg [1:0] rem;
@@ -61,6 +62,7 @@ module AES_CMAC#(
             cmacReg<=128'b0;
             bufFlg<=1'b1;
             calc<=2'd0;
+            size<=len/128;
         end  
         else
             begin
@@ -118,11 +120,16 @@ module AES_CMAC#(
                 
                  if(cmacAddra==size-1) begin
 
-                        if(cntr==46) in<=cmacReg^cmacIn^K1;
+                        if(cntr==46)begin
+                            $display("rem: ",len%16'd128);
+                            if(len%16'd128) in<=cmacReg^cmacIn^K2;
+                            else in<=cmacReg^cmacIn^K1;          
+                        end
                         if(flag) tag<=encrypted;
                     end
                     if(cmacAddra>=size) begin
                         if(cntr==46) begin
+                            
                             cmacDone<=1'b1;
                         end
                     end

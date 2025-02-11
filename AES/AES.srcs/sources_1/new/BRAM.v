@@ -51,9 +51,6 @@ module ram (clk,ena,enb,wea,web,addra,addrb,dia,doa,dib,dob);
             else dob<=ram[addrb];
         end
     end
-    
-    initial begin
-        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", ram);  
-    end   
+ 
 endmodule
 

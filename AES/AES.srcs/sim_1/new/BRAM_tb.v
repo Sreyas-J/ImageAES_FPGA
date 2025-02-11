@@ -1,60 +1,42 @@
-module ram_tb #(parameter RAM_DEPTH = 267);
+//module ram_tb;
+//    reg clk, ena, enb, wea, web;
+//    reg [8:0] addra, addrb;
+//    reg [127:0] dia, dib;
+//    wire [127:0] doa, dob;
 
-    reg clk;
-    reg ena,enb;
-    reg wea,web;
-    reg [8:0] addra;         // Address width adjusted to 9 bits for 512 addresses
-    reg [8:0] addrb;
-    reg [8:0] address;
-    reg [127:0] dia;       // 128-bit data input (not used in read mode)
-    reg [127:0] dib;
-    wire [127:0] doa;     // 128-bit data output
-    wire [127:0] dob;
+//    ram uut (
+//        .clk(clk),
+//        .ena(ena),
+//        .enb(enb),
+//        .wea(wea),
+//        .web(web),
+//        .addra(addra),
+//        .addrb(addrb),
+//        .dia(dia),
+//        .doa(doa),
+//        .dib(dib),
+//        .dob(dob)
+//    );
 
-    // Instantiate the RAM module
-    ram uut (
-        .clk(clk),
-        .ena(ena),
-        .enb(enb),
-        .wea(wea),
-        .web(web),
-        .addra(addra),
-        .addrb(addrb),
-        .dia(dia),
-        .doa(doa),
-        .dib(dib),
-        .dob(dob)
-    );
+//    initial begin
+//        // Load memory contents at simulation time
+//        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", uut.ram);
+//    end
 
-    // Clock generation
-    always #10 clk = ~clk;
+//    always #5 clk = ~clk; // Clock generation
 
-    // Testbench logic
-    initial begin
-        // Initialize signals
-        clk = 0;
-        wea = 0; // No writing, only reading
-        web = 0;
-        
-        #200
+//    initial begin
+//        clk = 0;
+//        ena = 1;
+//        enb = 1;
+//        wea = 0;
+//        web = 0;
+//        addra = 265;
+//        addrb = 1;
 
-        for (address = 0; address < RAM_DEPTH; address = address + 1) begin
-            #20;  // Wait for one clock cycle for each read operation
-            if(address%2) begin
-                ena=1'b0;
-                enb=1'b1;
-                addrb=address;
-            end
-            else begin
-                ena=1'b1;
-                enb=1'b0;
-                addra=address;
-            end
-            $display("addra:%d addrb:%d address:%d doa:%h dob:%h", addra,addrb,address, doa,dob);
-        end
-
-        // End simulation after reading all addresses
-        $finish;
-    end
-
-endmodule
+//        #10;
+//        $display("RAM[2]: %h", doa);
+//        #10;
+//        $finish;
+//    end
+//endmodule
