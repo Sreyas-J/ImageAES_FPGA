@@ -7,18 +7,6 @@ module AES_CMAC#(
     input clk,
     input reset,
     input wire [8:0] size,
-//    input is_padded,
-//    output reg [127:0] tag,
-//    output reg [127:0] X,
-//    output reg [8:0] messAddra,
-//    output reg [8:0] cmacAddra,
-//    output reg messDone,
-//    output reg [127:0] xin2,
-//    output wire [127:0] out,
-//    output wire [127:0] L,
-//    output reg flag,
-//    output wire [5:0] cntr,
-//    output reg [127:0] K1
     output [127:0] encrypted,
     output reg cmacDone
     );
@@ -33,8 +21,8 @@ module AES_CMAC#(
     reg compute = 1'b0;
     wire [127:0] out_X;
     reg done_out, final_tag;
-//    wire [127:0] encrypted;
     reg [127:0] cmacReg;
+    reg [1:0] calc;
     
     reg messDone;
     reg bufFlg;
@@ -45,7 +33,7 @@ module AES_CMAC#(
     
     reg [127:0] xin2;
     wire [127:0] out;
-    wire [127:0] L;
+    reg [127:0] L;
     reg [127:0] K1;
     wire flag;
     
@@ -54,17 +42,14 @@ module AES_CMAC#(
     
     reg [127:0] tag;
 
-    // Key Expansion
     keyExpansion ke (key128, fullkeys);
 
-    // Instantiate RAM and AES Encryption Modules
     ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
     AES_Encrypt inst1 (clk,reset, in, fullkeys, encrypted,flag,cntr);
 
-    // Generate Subkeys K1 and K2 after L is ready
     always @(posedge clk or posedge reset) begin
-        K1 = (L << 1) ^ (L[127] ? C : 0); // Compute K1
-        K2 = (K1 << 1) ^ (K1[127] ? C : 0); // Compute K2
+        K1 = (L << 1) ^ (L[127] ? C : 0); 
+        K2 = (K1 << 1) ^ (K1[127] ? C : 0); 
     end
     
     always@(posedge clk) begin
@@ -74,41 +59,21 @@ module AES_CMAC#(
             messDone<=1'b0;
             cmacDone<=1'b0;
             cmacReg<=128'b0;
-//            init<=1'b1;
             bufFlg<=1'b1;
-            
+            calc<=2'd0;
         end  
         else
             begin
                 if(messDone==1'b0) begin
 
                     if(messAddra>=size) begin
-                        // rem=messAddra%4;
-                        
-                        // if(rem==3) beginX
-                        //     if(cntr==44)begin
-                        //         messDone<=1'b1;
-                        //     end
-                        // end
-                        // else if(rem==2) begin
-                        //     if(cntr==43)begin
-                        //         messDone<=1'b1;
-                        //     end
-                        // end
-                        // else if(rem==1) begin
-                        //     if(cntr==42)begin
-                        //         messDone<=1'b1;
-                        //     end
-                        // end
                         if(cntr==45) begin
                             in<=cmacIn^cmacReg;
                             messDone<=1'b1;
                             cmacReg<=encrypted; 
                         end
                     end
-                    else if(messAddra%3==0) begin
-//                        in<=cmacIn^cmacReg;
-                        
+                    else if(messAddra%3==0) begin                        
                         in<=messIn;
                         messAddra<=messAddra+1;
                         cmacReg<=encrypted;
@@ -125,7 +90,6 @@ module AES_CMAC#(
                             bufFlg<=1'b1;
                         end
 
-//                        in<=messIn;
                     end
                     else if(messAddra%3==2)begin
                         if(flag) begin
@@ -137,34 +101,24 @@ module AES_CMAC#(
                     end
             end
              else if(cmacDone==1'b0) begin
-                
+                 if(cntr==3 & calc==2'd0) begin
+                    calc<=2'd1;
+                    in<=128'd0;
+                 end
+                 if(cntr==46 & calc==2'd1)begin
+                    L<=encrypted;
+                    calc<=2'd2;
+                end
                  if(cntr==46) in<=cmacIn^cmacReg;
                  if(cntr==45) cmacReg<=encrypted;
                  
                  if(flag)begin
                     cmacAddra<=cmacAddra+1;
-//                    in<=128'd0;
                 end
                 
                  if(cmacAddra==size-1) begin
-                        // rem=messAddra%4;
-                        
-                        // if(rem==3) beginX
-                        //     if(cntr==44)begin
-                        //         messDone<=1'b1;
-                        //     end
-                        // end
-                        // else if(rem==2) begin
-                        //     if(cntr==43)begin
-                        //         messDone<=1'b1;
-                        //     end
-                        // end
-                        // else if(rem==1) begin
-                        //     if(cntr==42)begin
-                        //         messDone<=1'b1;
-                        //     end
-                        // end
-                        if(cntr==46) in<=cmacReg^cmacIn^128'h8d42766f0f1eb704de9f02c54391b075;
+
+                        if(cntr==46) in<=cmacReg^cmacIn^K1;
                         if(flag) tag<=encrypted;
                     end
                     if(cmacAddra>=size) begin
@@ -175,7 +129,7 @@ module AES_CMAC#(
              end
         end
         
-        $display("cntr:%d flg:%b messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag, messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
     end
 
 endmodule
