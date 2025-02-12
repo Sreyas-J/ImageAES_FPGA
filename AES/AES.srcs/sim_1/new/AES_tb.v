@@ -8,15 +8,24 @@ module AES_tb;
     reg reset;
     wire [127:0] encrypted128;
     wire done;
+    wire [8:0] messAddra;
+    wire [8:0] cmacAddra;
+    wire [127:0] messIn;
+    wire [127:0] cmacIn;
 
+    ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
 
     // Instantiate the AES module
     AES_CMAC dut (
         .clk(clk),              // Connect clock
         .reset(reset),
         .len(size),
+        .messIn(messIn),
+        .cmacIn(cmacIn),
         .encrypted(encrypted128), // Connect encrypted128
-        .cmacDone(done)
+        .cmacDone(done),
+        .messAddra(messAddra),
+        .cmacAddra(cmacAddra)
     );
 
     // Clock generation
@@ -29,7 +38,7 @@ module AES_tb;
         $dumpfile("simulation.vcd");
         // Dump all variables from the testbench and instantiated modules
         $dumpvars(0, AES_tb);
-        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", dut.BRAM1.ram);
+        $readmemh("/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/image128.txt", BRAM1.ram);
 
         clk = 0;
         size=16'd34176;

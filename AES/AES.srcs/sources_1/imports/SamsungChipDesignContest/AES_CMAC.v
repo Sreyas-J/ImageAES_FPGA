@@ -7,16 +7,20 @@ module AES_CMAC#(
     input clk,
     input reset,
     input wire [15:0] len,
+    input wire [127:0] messIn,
+    input wire [127:0] cmacIn,
     output [127:0] encrypted,
-    output reg cmacDone
-    );
+    output reg cmacDone,
+    output reg [8:0] messAddra,
+    output reg [8:0] cmacAddra
+   );
 
     wire [(128*11)-1:0] fullkeys;
     wire [127:0] key128 = 128'h000102030405060708090a0b0c0d0e0f;
     reg [127:0] K2;
     reg [127:0] in; 
-    wire [127:0] messIn;
-    wire [127:0] cmacIn; 
+//    wire [127:0] messIn;
+//    wire [127:0] cmacIn; 
     reg L_ready, tag_updated;
     reg compute = 1'b0;
     wire [127:0] out_X;
@@ -28,8 +32,8 @@ module AES_CMAC#(
     reg bufFlg;
     reg [127:0] tag;
     reg [127:0] X;
-    reg [8:0] messAddra;
-    reg [8:0] cmacAddra;
+//    reg [8:0] messAddra;
+//    reg [8:0] cmacAddra;
     
     reg [127:0] xin2;
     wire [127:0] out;
@@ -45,10 +49,10 @@ module AES_CMAC#(
 
     keyExpansion ke (key128, fullkeys);
 
-    ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
+//    ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
     AES_Encrypt inst1 (clk,reset, in, fullkeys, encrypted,flag,cntr);
 
-    always @(posedge clk or posedge reset) begin
+    always @(posedge clk) begin
         K1 = (L << 1) ^ (L[127] ? C : 0); 
         K2 = (K1 << 1) ^ (K1[127] ? C : 0); 
     end
