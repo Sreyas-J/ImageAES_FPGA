@@ -12,6 +12,7 @@ module AES_tb;
     wire [8:0] cmacAddra;
     wire [127:0] messIn;
     wire [127:0] cmacIn;
+    wire [127:0] tag;
 
     ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
 
@@ -25,7 +26,8 @@ module AES_tb;
         .encrypted(encrypted128), // Connect encrypted128
         .cmacDone(done),
         .messAddra(messAddra),
-        .cmacAddra(cmacAddra)
+        .cmacAddra(cmacAddra),
+        .tag(tag)
     );
 
     // Clock generation

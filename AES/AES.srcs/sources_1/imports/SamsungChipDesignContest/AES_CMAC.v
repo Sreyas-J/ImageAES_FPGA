@@ -12,7 +12,8 @@ module AES_CMAC#(
     output [127:0] encrypted,
     output reg cmacDone,
     output reg [8:0] messAddra,
-    output reg [8:0] cmacAddra
+    output reg [8:0] cmacAddra,
+    output reg [127:0] tag
    );
 
     wire [(128*11)-1:0] fullkeys;
@@ -30,7 +31,6 @@ module AES_CMAC#(
     
     reg messDone;
     reg bufFlg;
-    reg [127:0] tag;
     reg [127:0] X;
 //    reg [8:0] messAddra;
 //    reg [8:0] cmacAddra;
@@ -45,7 +45,7 @@ module AES_CMAC#(
     wire [5:0] cntr;
     reg [1:0] rem;
     
-    reg [127:0] tag;
+//    reg [127:0] tag;
 
     keyExpansion ke (key128, fullkeys);
 
@@ -125,7 +125,7 @@ module AES_CMAC#(
                  if(cmacAddra==size-1) begin
 
                         if(cntr==46)begin
-                            $display("rem: ",len%16'd128);
+//                            $display("rem: ",len%16'd128);
                             if(len%16'd128) in<=cmacReg^cmacIn^K2;
                             else in<=cmacReg^cmacIn^K1;          
                         end
@@ -140,7 +140,7 @@ module AES_CMAC#(
              end
         end
         
-        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+//        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
     end
 
 endmodule

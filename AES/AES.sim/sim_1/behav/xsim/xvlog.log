@@ -1,7 +1,5 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/SamsungChipDesignContest/AES_CMAC.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AES_CMAC
-WARNING: [VRFC 10-3248] data object 'tag' is already declared [/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/SamsungChipDesignContest/AES_CMAC.v:48]
-WARNING: [VRFC 10-9364] second declaration of 'tag' is ignored [/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/SamsungChipDesignContest/AES_CMAC.v:48]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/imports/new/AES_Encryption.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AES_Encrypt
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sources_1/new/BRAM.v" into library xil_defaultlib
