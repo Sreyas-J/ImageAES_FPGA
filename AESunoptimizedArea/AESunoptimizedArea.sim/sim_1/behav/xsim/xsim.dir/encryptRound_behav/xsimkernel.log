@@ -1,0 +1,4 @@
+Running: xsim.dir/encryptRound_behav/xsimk -simmode gui -wdb encryptRound_behav.wdb -simrunnum 0 -socket 51979
+Design successfully loaded
+Design Loading Memory Usage: 23612 KB (Peak: 24192 KB)
+Design Loading CPU Usage: 50 ms
