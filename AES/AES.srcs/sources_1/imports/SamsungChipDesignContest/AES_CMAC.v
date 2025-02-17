@@ -6,14 +6,15 @@ module AES_CMAC#(
 (   
     input clk,
     input reset,
-    input wire [15:0] len,
+    input wire [31:0] len,
     input wire [127:0] messIn,
     input wire [127:0] cmacIn,
     output [127:0] encrypted,
     output reg cmacDone,
     output reg [8:0] messAddra,
     output reg [8:0] cmacAddra,
-    output reg [127:0] tag
+    output reg [127:0] tag,
+    output wire [5:0] cntr
    );
 
     wire [(128*11)-1:0] fullkeys;
@@ -40,9 +41,8 @@ module AES_CMAC#(
     reg [127:0] L;
     reg [127:0] K1;
     wire flag;
-    reg [8:0] size;
+    reg [31:0] size;
     
-    wire [5:0] cntr;
     reg [1:0] rem;
     
 //    reg [127:0] tag;

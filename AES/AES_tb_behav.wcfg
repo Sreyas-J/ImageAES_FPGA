@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="AES_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="AES_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.243506 us"></ZoomStartTime>
+      <ZoomEndTime time="190.384129 us"></ZoomEndTime>
+      <Cursor1Time time="300.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="134"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject type="logic" fp_name="/AES_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/size">
+      <obj_property name="ElementShortName">size[15:0]</obj_property>
+      <obj_property name="ObjectShortName">size[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/AES_tb/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/encrypted128">
+      <obj_property name="ElementShortName">encrypted128[127:0]</obj_property>
+      <obj_property name="ObjectShortName">encrypted128[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/AES_tb/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/messAddra">
+      <obj_property name="ElementShortName">messAddra[8:0]</obj_property>
+      <obj_property name="ObjectShortName">messAddra[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/cmacAddra">
+      <obj_property name="ElementShortName">cmacAddra[8:0]</obj_property>
+      <obj_property name="ObjectShortName">cmacAddra[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/messIn">
+      <obj_property name="ElementShortName">messIn[127:0]</obj_property>
+      <obj_property name="ObjectShortName">messIn[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/cmacIn">
+      <obj_property name="ElementShortName">cmacIn[127:0]</obj_property>
+      <obj_property name="ObjectShortName">cmacIn[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AES_tb/tag">
+      <obj_property name="ElementShortName">tag[127:0]</obj_property>
+      <obj_property name="ObjectShortName">tag[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/AES_tb/dia">
+      <obj_property name="ElementShortName">dia</obj_property>
+      <obj_property name="ObjectShortName">dia</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/AES_tb/dib">
+      <obj_property name="ElementShortName">dib</obj_property>
+      <obj_property name="ObjectShortName">dib</obj_property>
+   </wvobject>
+</wave_config>
