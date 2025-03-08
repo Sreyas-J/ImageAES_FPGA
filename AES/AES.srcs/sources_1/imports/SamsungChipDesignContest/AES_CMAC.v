@@ -140,7 +140,7 @@ module AES_CMAC#(
              end
         end
         
-//        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
     end
 
 endmodule
