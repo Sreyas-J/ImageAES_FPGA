@@ -361,7 +361,7 @@ module keyExpansion(input clk,input reset,input [127:0] key,output reg [(128 * (
     always@(posedge clk)begin
         
         if(reset)begin
-            w<=key;
+            w[128*11-1-:128]<=key;
             cmplt<=1'b0;
             cntr<=6'd8;
             rem<=3'd0;
@@ -373,7 +373,7 @@ module keyExpansion(input clk,input reset,input [127:0] key,output reg [(128 * (
             rem<=cntr%7;
             cntr<=cntr+1;
             if(rem==0)begin
-                if(round>1) w[128*(round-1)+:32]<=temp;
+                if(round>1) w[128*(11-round)+:32]<=temp;
                 rot <= rotword(temp); 
 //                buff<=1'b0;
             end
@@ -394,22 +394,22 @@ module keyExpansion(input clk,input reset,input [127:0] key,output reg [(128 * (
 //                    buff<=1'b1;
 //                end
 //                else begin
-                    temp<=w[128*(round-1)+(6-rem)*32+:32]^temp;
+                    temp<=w[128*(11-round)+3*32+:32]^temp;
 //                    rem<=cntr%7;
 //                    cntr<=cntr+1;
 //                end
             end
             else begin
-                w[128*round+(7-rem)*32+:32]<=temp;
-                temp<=w[128*(round-1)+(6-rem)*32+:32]^temp;
+                w[128*(10-round)+(7-rem)*32+:32]<=temp;
+                temp<=w[128*(11-round)+(6-rem)*32+:32]^temp;
             end
 
             
-            $display("keyCounter: %d  round:%d buff:%b rem:%d in:%h rot: %h rin:%h sub:%h rconv: %h temp:%h w:%h",cntr,round,buff,rem,w[128*(round-1)+(6-rem)*32+:32],rot,w[128*(round-1)+:32],x,rconv,temp,w);
+            $display("keyCounter: %d  round:%d buff:%b rem:%d in:%h rot: %h rin:%h sub:%h rconv: %h temp:%h w:%h",cntr,round,buff,rem,w[128*(11-round)+(6-rem)*32+:32],rot,temp,x,rconv,temp,w);
             
             if(cntr==7'd79) cmplt<=1'b1;
         end
-        $display("%h",w);
+//        $display("%h",w);
     end   
     
     function [31:0] rotword;
