@@ -44,13 +44,14 @@ module AES_CMAC#(
     reg [31:0] size;
     
     reg [1:0] rem;
-    
+    wire [3:0] keyRnd;
+    reg rst;
 //    reg [127:0] tag;
 
-    keyExpansion ke (clk,reset,key128, fullkeys);
+    keyExpansion ke (clk,reset,key128, fullkeys,keyRnd);
 
 //    ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
-    AES_Encrypt inst1 (clk,reset, in, fullkeys, encrypted,flag,cntr);
+    AES_Encrypt inst1 (clk,rst, in, fullkeys, encrypted,flag,cntr);
 
     always @(posedge clk) begin
         K1 = (L << 1) ^ (L[127] ? C : 0); 
@@ -67,10 +68,11 @@ module AES_CMAC#(
             bufFlg<=1'b1;
             calc<=2'd0;
             size<=len/128;
+            rst<=1'b1;
         end  
-        else
-            begin
-                if(messDone==1'b0) begin
+        else if(keyRnd>=11) begin
+            if(rst==0)begin
+                    if(messDone==1'b0) begin
 
                     if(messAddra>=size) begin
                         if(cntr==45) begin
@@ -105,42 +107,44 @@ module AES_CMAC#(
 
                         in<=messIn;
                     end
-            end
-             else if(cmacDone==1'b0) begin
-                 if(cntr==3 & calc==2'd0) begin
-                    calc<=2'd1;
-                    in<=128'd0;
+                end
+                 else if(cmacDone==1'b0) begin
+                     if(cntr==3 & calc==2'd0) begin
+                        calc<=2'd1;
+                        in<=128'd0;
+                     end
+                     if(cntr==46 & calc==2'd1)begin
+                        L<=encrypted;
+                        calc<=2'd2;
+                    end
+                     if(cntr==46) in<=cmacIn^cmacReg;
+                     if(cntr==45) cmacReg<=encrypted;
+                     
+                     if(flag)begin
+                        cmacAddra<=cmacAddra+1;
+                    end
+                    
+                     if(cmacAddra==size-1) begin
+    
+                            if(cntr==46)begin
+    //                            $display("rem: ",len%16'd128);
+                                if(len%16'd128) in<=cmacReg^cmacIn^K2;
+                                else in<=cmacReg^cmacIn^K1;          
+                            end
+                            if(flag) tag<=encrypted;
+                        end
+                        if(cmacAddra>=size) begin
+                            if(cntr==46) begin
+                                
+                                cmacDone<=1'b1;
+                            end
+                        end
                  end
-                 if(cntr==46 & calc==2'd1)begin
-                    L<=encrypted;
-                    calc<=2'd2;
-                end
-                 if(cntr==46) in<=cmacIn^cmacReg;
-                 if(cntr==45) cmacReg<=encrypted;
-                 
-                 if(flag)begin
-                    cmacAddra<=cmacAddra+1;
-                end
-                
-                 if(cmacAddra==size-1) begin
-
-                        if(cntr==46)begin
-//                            $display("rem: ",len%16'd128);
-                            if(len%16'd128) in<=cmacReg^cmacIn^K2;
-                            else in<=cmacReg^cmacIn^K1;          
-                        end
-                        if(flag) tag<=encrypted;
-                    end
-                    if(cmacAddra>=size) begin
-                        if(cntr==46) begin
-                            
-                            cmacDone<=1'b1;
-                        end
-                    end
              end
+            rst<=1'b0;
         end
         
-//        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+        $display("keyRnd:%d cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",keyRnd,cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
 //        $display("%h %h %h %h %h %h %h %h %h %h %h",fullkeys[(128*11-1)-:128],fullkeys[(128*10-1)-:128],fullkeys[(128*9-1)-:128],fullkeys[(128*8-1)-:128],fullkeys[(128*7-1)-:128],fullkeys[(128*6-1)-:128],fullkeys[(128*5-1)-:128],fullkeys[(128*4-1)-:128],fullkeys[(128*3-1)-:128],fullkeys[(128*2-1)-:128],fullkeys[(128*1-1)-:128]);
     end
 

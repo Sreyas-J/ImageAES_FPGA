@@ -405,7 +405,7 @@ module keyExpansion(input clk,input reset,input [127:0] key,output reg [(128 * (
             end
 
             
-            $display("keyCounter: %d  round:%d buff:%b rem:%d in:%h rot: %h rin:%h sub:%h rconv: %h temp:%h w:%h",cntr,round,buff,rem,w[128*(11-round)+(6-rem)*32+:32],rot,temp,x,rconv,temp,w);
+//            $display("keyCounter: %d  round:%d buff:%b rem:%d in:%h rot: %h rin:%h sub:%h rconv: %h temp:%h w:%h",cntr,round,buff,rem,w[128*(11-round)+(6-rem)*32+:32],rot,temp,x,rconv,temp,w);
             
             if(cntr==7'd79) cmplt<=1'b1;
         end

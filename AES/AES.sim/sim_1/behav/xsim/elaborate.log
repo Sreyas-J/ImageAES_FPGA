@@ -7,18 +7,4 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 128 for port 'dia' [/home/dell/Desktop/IIITB/5thSem/FPGA/VivadoProjects/FPGA_project/AES/AES.srcs/sim_1/new/AES_tb.v:20]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.ram
-Compiling module xil_defaultlib.keyExpansion
-Compiling module xil_defaultlib.addRoundKey
-Compiling module xil_defaultlib.sbox
-Compiling module xil_defaultlib.subBytes_default
-Compiling module xil_defaultlib.shiftRows
-Compiling module xil_defaultlib.mixColumns
-Compiling module xil_defaultlib.AES_Encrypt
-Compiling module xil_defaultlib.AES_CMAC
-Compiling module xil_defaultlib.AES_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot AES_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
