@@ -93,6 +93,22 @@ module shiftRows (in, shifted);
 
 endmodule
 
+//module sub(in,out,start);
+//input [127:0] in;
+//input [7:0] start;
+//output [127:0] out;
+
+////genvar i;
+////generate 
+////for(i=0;i<128;i=i+8) begin :sub_Bytes 
+////	sbox s(in[i +:8],out[i +:8]);
+////	end
+////endgenerate
+//    sbox s(in[start+:8],out[start+:8]);
+//endmodule
+
+//module subBytes(clk,
+
 module subBytes(in,out);
 input [127:0] in;
 output [127:0] out;
