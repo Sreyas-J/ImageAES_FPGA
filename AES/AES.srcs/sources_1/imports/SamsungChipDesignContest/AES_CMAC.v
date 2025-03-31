@@ -47,7 +47,7 @@ module AES_CMAC#(
     
 //    reg [127:0] tag;
 
-    keyExpansion ke (key128, fullkeys);
+    keyExpansion ke (clk,reset,key128, fullkeys);
 
 //    ram BRAM1 (clk, 1'b1,1'b1,1'b0,1'b0, messAddra,cmacAddra, dia, messIn,dib,cmacIn);
     AES_Encrypt inst1 (clk,reset, in, fullkeys, encrypted,flag,cntr);
@@ -140,7 +140,8 @@ module AES_CMAC#(
              end
         end
         
-        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+//        $display("cntr:%d flg:%b calc:%d L1:%h messAddra:%d cmacAddra:%d messIn:%h cmacIn:%h in:%h cmacReg:%h encrypted:%h bufFlg:%d messDone:%b cmacDone:%b tag:%h",cntr,flag,calc, L,messAddra,cmacAddra,messIn,cmacIn,in,cmacReg,encrypted,bufFlg,messDone,cmacDone,tag);
+//        $display("%h %h %h %h %h %h %h %h %h %h %h",fullkeys[(128*11-1)-:128],fullkeys[(128*10-1)-:128],fullkeys[(128*9-1)-:128],fullkeys[(128*8-1)-:128],fullkeys[(128*7-1)-:128],fullkeys[(128*6-1)-:128],fullkeys[(128*5-1)-:128],fullkeys[(128*4-1)-:128],fullkeys[(128*3-1)-:128],fullkeys[(128*2-1)-:128],fullkeys[(128*1-1)-:128]);
     end
 
 endmodule
